@@ -2,7 +2,7 @@
 
 Rails.application.routes.draw do
 
-  
+  resources :comments, only: [:new, :create]
   resources :videos
 
   get 'home/index'
