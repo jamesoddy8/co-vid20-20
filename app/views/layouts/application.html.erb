@@ -8,8 +8,29 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
+
+    <header>
+      <%= form_tag(search_page_path, method: :get) do %>
+      <%= search_field_tag :search, params[:search], placeholder: "Search" %>
+      <%= button_tag "Search", :name => nil%>
+    <% end %>
+      
+       <% if current_user %>
+    <%= link_to 'Sign out', destroy_user_session_path, method: :delete%>
+    <% else %>
+    <%= link_to 'Create an account', new_user_registration_path %>
+
+    <%= link_to 'Sign in', new_user_session_path%>
+    <% end %>
+
     <%= yield %>
+  </header>
+  <%= yield %>
+</body>
+</html>
+
+   
   </body>
 </html>
+
