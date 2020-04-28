@@ -8,8 +8,13 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
-    <%= yield %>
-  </body>
+    <header>
+      <%= form_tag(search_page_path, method: :get) do %>
+      <%= search_field_tag :search, params[:search], placeholder: "Search" %>
+      <%= button_tag "Search", :name => nil%>
+    <% end %>
+  </header>
+  <%= yield %>
+</body>
 </html>
