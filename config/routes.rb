@@ -1,6 +1,10 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+
+  
+  resources :videos
+
   get 'home/index'
   get '/search', to: 'search#search', as: 'search_page'
   root to: 'home#index'

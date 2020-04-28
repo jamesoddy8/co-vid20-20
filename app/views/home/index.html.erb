@@ -1,8 +1,7 @@
 <h1>Covid 2020 lol</h1>
 <% if current_user %>
-<%= link_to 'Sign out', destroy_user_session_path, method: :delete%>
-<% else %>
-<%= link_to 'Create an account', new_user_registration_path %>
 
-<%= link_to 'Sign in', new_user_session_path%>
+<%= link_to 'Upload a new video', new_video_path%>
+
 <% end %>
+
