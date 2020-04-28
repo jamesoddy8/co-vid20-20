@@ -28,6 +28,7 @@
     
   </div>
   <%= form_for @comment, remote: true do |f| %>
+    <% f.hidden_field :video_id, :value => @video.id%>
     <%= f.text_field :content %>
     <%= f.submit %>
   <% end %>

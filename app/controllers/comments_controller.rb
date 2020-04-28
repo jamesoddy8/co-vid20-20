@@ -5,6 +5,8 @@ class CommentsController < ApplicationController
 
   def create
     @comment = Comment.create(comment_params)
+    @comment.video_id = params[:video_id]
+    @comment.user = current_user
     if @comment.save
       ActionCable.server.broadcast 'room_channel',
       content: @comment.content
