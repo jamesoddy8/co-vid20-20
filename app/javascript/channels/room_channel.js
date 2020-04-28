@@ -11,7 +11,7 @@ consumer.subscriptions.create("RoomChannel", {
 
   received(data) {
     console.log(data.content)
-    $('#chatbox').append('<div class="message">' + data.content + '</div>')
+    $('#chatbox').append('<div class="message">' + data.time_commented + ' ' + data.commentor + ' said: ' + data.content + '</div>')
     $('#chatbox').scrollTop($('#chatbox')[0].scrollHeight);
     // Called when there's incoming data on the websocket for this channel
   }
