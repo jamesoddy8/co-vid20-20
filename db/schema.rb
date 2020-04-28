@@ -53,13 +53,6 @@ ActiveRecord::Schema.define(version: 2020_04_28_125146) do
   create_table "videos", force: :cascade do |t|
     t.string "title"
     t.text "description"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "videos", force: :cascade do |t|
-    t.string "title"
-    t.text "description"
     t.references "user"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
