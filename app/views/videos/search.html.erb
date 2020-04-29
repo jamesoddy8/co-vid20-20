@@ -1,11 +1,15 @@
-<h1>Search</h1>
+
 <% if flash[:notice] %>
   <div class="notice"><%= flash[:notice] %></div>
 <% end %>
 
-<% if @results %>
-  <h2>Search results</h2>
+<h2>Search results</h2>
+<% if @results.present? %>
   <% @results.each do |result| %>
-    <%= link_to "#{result.title}", result %></br>
+    <div class="search-result-video">
+      <%= link_to "#{result.title}", result %>
+    </div>
   <% end %>
+  <% else %>
+    <div class="notice">No search results match your search</div>
 <% end %>

@@ -69,9 +69,28 @@ class VideosController < ApplicationController
       flash.now[:notice] = 'Empty field!'
     else
       @parameter = params[:search].downcase
-      @results = Video.all.where("lower(title) LIKE :search OR lower(description) LIKE :search", search: "%#{@parameter}%")
+      @results = (Video.all.where("lower(title) LIKE :search OR lower(description) LIKE :search", search: "%#{@parameter}%")) &&
+
+       (Video.all.where("(id) LIKE :user_match", user_match: "#{(User.id.where('lower(username) LIKE :search'})", search: "%#{@parameter}%")))
     end
   end
+
+
+      # (User.all.where("lower(username) LIKE :search"))
+
+      # parameter = "broken"
+      # if username = parameters
+      #   then take username(userID)
+      #   look in Video table
+      #   return videos where video(userID) matches username(userID)
+      #
+      #   User.id.where("lower(username) LIKE :search")
+      #
+      #
+      #
+      #
+      #
+      # , search: "%#{@parameter}%"))
 
   private
 
@@ -82,6 +101,6 @@ class VideosController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def video_params
-    params.require(:video).permit(:title, :description, :clip, :thumbnail, :search)
+    params.require(:video).permit(:title, :description, :clip, :thumbnail, :search, :user_id)
   end
 end
