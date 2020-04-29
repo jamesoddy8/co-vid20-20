@@ -1,1 +1,11 @@
 <h1>Search</h1>
+<% if flash[:notice] %>
+  <div class="notice"><%= flash[:notice] %></div>
+<% end %>
+
+<% if @results %>
+  <h2>Search results</h2>
+  <% @results.each do |result| %>
+    <%= result.title %>
+  <% end %>
+<% end %>

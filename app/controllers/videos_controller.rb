@@ -64,11 +64,15 @@ class VideosController < ApplicationController
     end
   end
 
-  def search
-    if params[:search].blank?
-      redirect_to(root_path, flash[:notice] = 'You need to search for something!')
+    def search
+      if params[:search].blank?
+        flash[:notice] = 'Empty field!'
+      else
+        @parameter = params[:search].downcase
+        @results = Video.all.where("lower(title) LIKE :search", search: "%#{@parameter}%")
+        p @results
+        end
     end
-  end
 
   private
 
