@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class VideosController < ApplicationController
-  before_action :set_video, only: [:show, :edit, :update, :destroy]
+  before_action :set_video, only: %i[show edit update destroy]
 
   # GET /videos
   # GET /videos.json
@@ -11,7 +13,7 @@ class VideosController < ApplicationController
   # GET /videos/1.json
   def show
     @comment = Comment.new
-    @comments = Comment.where(:video_id => params[:id])
+    @comments = Comment.where(video_id: params[:id])
   end
 
   # GET /videos/new
@@ -20,8 +22,7 @@ class VideosController < ApplicationController
   end
 
   # GET /videos/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /videos
   # POST /videos.json
@@ -63,14 +64,21 @@ class VideosController < ApplicationController
     end
   end
 
-  private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_video
-      @video = Video.find(params[:id])
+  def search
+    if params[:search].blank?
+      redirect_to(root_path, flash[:notice] = 'You need to search for something!')
     end
+  end
 
-    # Only allow a list of trusted parameters through.
-    def video_params
-      params.require(:video).permit(:title, :description, :clip, :thumbnail)
-    end
+  private
+
+  # Use callbacks to share common setup or constraints between actions.
+  def set_video
+    @video = Video.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def video_params
+    params.require(:video).permit(:title, :description, :clip, :thumbnail, :search)
+  end
 end
