@@ -11,6 +11,7 @@ class VideosController < ApplicationController
   # GET /videos/1.json
   def show
     @comment = Comment.new
+    @comments = Comment.where(:video_id => params[:id])
   end
 
   # GET /videos/new

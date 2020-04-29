@@ -6,13 +6,11 @@
       <p>Title: <%= link_to video.title, video %></p>
       <p>Description: <%= video.description %></p>
       <p>By: <%= link_to video.user.email, '/users/' + video.user.id.to_s + '/profile' %> </p>
+      <%= link_to 'Show', video %></td>
       <% if current_user === video.user %>
-        <%= link_to 'Show', video %></td>
         <%= link_to 'Edit', edit_video_path(video) %>
         <%= link_to 'Destroy', video, method: :delete, data: { confirm: 'Are you sure?' } %>
       <% end %>
-      
-    
   <% end %>
 
 <br>

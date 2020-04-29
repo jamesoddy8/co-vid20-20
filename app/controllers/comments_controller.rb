@@ -5,7 +5,6 @@ class CommentsController < ApplicationController
 
   def create
     @comment = Comment.create(comment_params)
-    @comment.video_id = params[:video_id].to_i
     @comment.user = current_user
     if @comment.save
       ActionCable.server.broadcast 'room_channel',
@@ -18,6 +17,6 @@ class CommentsController < ApplicationController
   private
 
   def comment_params
-    params.require(:comment).permit(:content)
+    params.require(:comment).permit(:content, :video_id)
   end
 end
