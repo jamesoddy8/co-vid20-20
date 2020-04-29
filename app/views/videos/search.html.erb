@@ -6,6 +6,6 @@
 <% if @results %>
   <h2>Search results</h2>
   <% @results.each do |result| %>
-    <%= result.title %>
+    <%= link_to "#{result.title}", result %></br>
   <% end %>
 <% end %>

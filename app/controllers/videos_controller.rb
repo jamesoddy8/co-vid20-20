@@ -64,15 +64,14 @@ class VideosController < ApplicationController
     end
   end
 
-    def search
-      if params[:search].blank?
-        flash[:notice] = 'Empty field!'
-      else
-        @parameter = params[:search].downcase
-        @results = Video.all.where("lower(title) LIKE :search", search: "%#{@parameter}%")
-        p @results
-        end
+  def search
+    if params[:search].blank?
+      flash[:notice] = 'Empty field!'
+    else
+      @parameter = params[:search].downcase
+      @results = Video.all.where("lower(title) LIKE :search OR lower(description) LIKE :search", search: "%#{@parameter}%")
     end
+  end
 
   private
 
