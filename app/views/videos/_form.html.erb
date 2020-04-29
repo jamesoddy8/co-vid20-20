@@ -30,6 +30,10 @@
     <%= form.label :thumbnail %>
     <%= form.file_field :thumbnail %>
   </div>
+  
+  <div class="large-10 large-centered columns">
+    <%= form.text_field :all_tags, placeholder: "tags separated with commas" %>
+  </div>
 
   <div class="actions">
     <%= form.submit %>
