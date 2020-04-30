@@ -3,7 +3,9 @@
 Rails.application.routes.draw do
 
   resources :comments, only: [:new, :create]
-  resources :videos
+  resources :videos do
+    resources :likes
+  end
 
   get 'home/index'
   get '/search', to: 'search#search', as: 'search_page'
