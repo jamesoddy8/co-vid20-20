@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   resources :comments, only: [:new, :create]
   resources :videos do
     resources :likes
+    member do
+      put "like" => "videos#vote"
+    end
   end
 
   get 'home/index'
