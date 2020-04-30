@@ -10,6 +10,10 @@ class Video < ApplicationRecord
       Tag.where(name: name.strip).first_or_create!
     end
   end
+  
+  def self.search(search)
+   where("lower(users.username) LIKE :search OR lower(videos.title) LIKE :search OR lower(videos.description) LIKE :search", search: "%#{search.downcase}%")
+  end
 
   def all_tags
     self.tags.map(&:name).join(", ")

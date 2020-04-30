@@ -1,0 +1,17 @@
+
+<% if flash[:notice] %>
+  <div class="notice"><%= flash[:notice] %></div>
+<% end %>
+
+<h2>Search results</h2>
+<% if @results.present? %>
+  <% @results.each do |result| %>
+    <div class="search-result-video">
+      <%= link_to "#{result.title}", result %>
+      by
+      <%= link_to result.user.username, '/users/' + result.user.id.to_s + '/profile' %>
+    </div>
+  <% end %>
+  <% else %>
+    <div class="notice">No search results match your search</div>
+<% end %>
