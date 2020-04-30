@@ -8,6 +8,8 @@
   <% @results.each do |result| %>
     <div class="search-result-video">
       <%= link_to "#{result.title}", result %>
+      by
+      <%= link_to result.user.username, '/users/' + result.user.id.to_s + '/profile' %>
     </div>
   <% end %>
   <% else %>

@@ -68,36 +68,12 @@ class VideosController < ApplicationController
     if params[:search].blank?
       flash.now[:notice] = 'Empty field!'
     else
-      search_term = params[:search].downcase
-      #user_id = User.find(search_term).id
-      @results = Video.where(:title => search_term) #|| Video.where(:user_id => user_id.to_i)
-      #@results = (Video.all.where("lower(title) LIKE :search OR lower(description) LIKE :search", search: "%#{@parameter}%")) && (Video.all.where('(id) LIKE :user_match', user_match: "#{(User.id.where('lower(username) LIKE :search'})", search: "%#{@parameter}%"))))
-
-      #  (Video.all.where("(id) LIKE :user_match", user_match: "#{(User.id.where('lower(username) LIKE :search'})", search: "%#{@parameter}%")))
-       
-       
-
+      @results = Video.joins(:user).search(params[:search])
     end
   end
 
 
-      # (User.all.where("lower(username) LIKE :search"))
-
-      # parameter = "broken"
-      # if username = parameters
-      #   then take username(userID)
-      #   look in Video table
-      #   return videos where video(userID) matches username(userID)
-      #
-      #   User.id.where("lower(username) LIKE :search")
-      #
-      #
-      #
-      #
-      #
-      # , search: "%#{@parameter}%"))
-
-  private
+private
 
   # Use callbacks to share common setup or constraints between actions.
   def set_video
@@ -106,6 +82,6 @@ class VideosController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def video_params
-    params.require(:video).permit(:title, :description, :clip, :thumbnail, :search, :user_id)
+    params.require(:video).permit(:title, :description, :clip, :thumbnail, :search)
   end
 end
