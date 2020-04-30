@@ -73,6 +73,7 @@ class VideosController < ApplicationController
       @description_results = Video.all.where("lower(description) LIKE :search", search: "%#{@parameter}%")
       @tags_results = Video.joins(:tags).where("lower(tags.name) LIKE :search", search: "%#{@parameter}%")
       @user_results = Video.joins(:user).where("lower(users.username) LIKE :search", search: "%#{@parameter}%")
+      @combined_results = [@title_results, @description_results, @tags_results, @user_results].flatten.uniq
 
 
       # @results = Video.joins(:user).search(params[:search])
