@@ -2,7 +2,7 @@ class Video < ApplicationRecord
   belongs_to :user
   has_one_attached :clip
   has_one_attached :thumbnail
-  has_many :taggings
+  has_many :taggings, dependent: :destroy
   has_many :tags, through: :taggings
 
   def all_tags=(names)
