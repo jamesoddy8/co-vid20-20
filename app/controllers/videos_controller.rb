@@ -72,7 +72,6 @@ class VideosController < ApplicationController
     end
   end
 
-
 private
 
   # Use callbacks to share common setup or constraints between actions.
@@ -82,6 +81,6 @@ private
 
   # Only allow a list of trusted parameters through.
   def video_params
-    params.require(:video).permit(:title, :description, :clip, :thumbnail, :search)
+    params.require(:video).permit(:title, :description, :clip, :thumbnail, :search, :all_tags)
   end
 end
