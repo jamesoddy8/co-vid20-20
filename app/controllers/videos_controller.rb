@@ -68,8 +68,10 @@ class VideosController < ApplicationController
     if params[:search].blank?
       flash.now[:notice] = 'Empty field!'
     else
-      @parameter = params[:search].downcase
-      @results = (Video.all.where("lower(title) LIKE :search OR lower(description) LIKE :search", search: "%#{@parameter}%")) && (Video.all.where('(id) LIKE :user_match', user_match: "#{(User.id.where('lower(username) LIKE :search'})", search: "%#{@parameter}%")))
+      search_term = params[:search].downcase
+      #user_id = User.find(search_term).id
+      @results = Video.where(:title => search_term) #|| Video.where(:user_id => user_id.to_i)
+      #@results = (Video.all.where("lower(title) LIKE :search OR lower(description) LIKE :search", search: "%#{@parameter}%")) && (Video.all.where('(id) LIKE :user_match', user_match: "#{(User.id.where('lower(username) LIKE :search'})", search: "%#{@parameter}%"))))
 
       #  (Video.all.where("(id) LIKE :user_match", user_match: "#{(User.id.where('lower(username) LIKE :search'})", search: "%#{@parameter}%")))
        
