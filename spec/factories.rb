@@ -1,4 +1,8 @@
 FactoryBot.define do
+  factory :conversation do
+    
+  end
+
 
   factory :user do
     id {"2"}
