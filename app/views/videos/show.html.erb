@@ -3,6 +3,7 @@
 
   <!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
   <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <p>
   Title: <%= @video.title %>
 </p>
@@ -28,7 +29,14 @@
     <source src="<%= url_for(@video.clip) %>" type="video/mp4" />
     
   </video>
-  <div id="chatbox" style="width: 100%;height: 100px;border:solid black;margin-top: 20px;overflow:scroll">
+  <br>
+  <span class="likes-count"><%= @video.get_upvotes.size %></span>
+  <%= link_to like_video_path(@video), class:"like-btn", method: :put, remote: :true do %>
+  <br>
+    <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+  <% end %>
+  
+  <div id="chatbox" style="width: 30%;height: 100px;border:solid black;margin-top: 20px;overflow:scroll">
     <% @comments.each do |comment| %>
     <div class="message"><%= comment.make_comment(comment) %> </div>
     <% end %>

@@ -29,7 +29,8 @@
     <div class="search-result-video">
       <%= link_to "#{result.title}", result %>
       by
-      <%= link_to result.user.username, '/users/' + result.user.id.to_s + '/profile' %>
+      <%= link_to result.user.username, '/users/' + result.user.id.to_s + '/profile' %><br>
+      tags: <%= result.all_tags %><br>
     </div>
   <% end %>
 

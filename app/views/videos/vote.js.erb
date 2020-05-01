@@ -1,0 +1,11 @@
+
+<% if current_user.liked? @video %> 
+    $('.like-btn').removeClass('liked');
+    <% else %> 
+    $('.like-btn').addClass('like-btn');
+<% end%>
+$('.likes-count').html("<%= @video.get_upvotes.size %>")
+
+function myFunction(x) {
+    x.classList.toggle("fa-thumbs-down");
+  }
