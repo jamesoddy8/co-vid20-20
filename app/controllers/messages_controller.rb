@@ -16,7 +16,9 @@ end
     end
     if @messages.last
       if @messages.last.user_id != current_user.id
-        @messages.last.read = true
+        @messages.last.read = true;
+        # find a way to change more than last
+        Message.find(@messages.last.id).update(read: true)
       end
     end
     @message = @conversation.messages.new
