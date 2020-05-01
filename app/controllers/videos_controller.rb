@@ -77,7 +77,7 @@ class VideosController < ApplicationController
     if params[:search].blank?
       flash.now[:notice] = 'Empty field!'
     else
-      @results = Video.joins(:user).search(params[:search])
+      @results = Video.joins(:user, :tags).search(params[:search])
     end
   end
 
