@@ -45,15 +45,6 @@ ActiveRecord::Schema.define(version: 2020_04_30_135826) do
     t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
-  create_table "dislikes", force: :cascade do |t|
-    t.bigint "video_id", null: false
-    t.bigint "user_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_dislikes_on_user_id"
-    t.index ["video_id"], name: "index_dislikes_on_video_id"
-  end
-
   create_table "likes", force: :cascade do |t|
     t.bigint "video_id", null: false
     t.bigint "user_id", null: false
@@ -125,8 +116,6 @@ ActiveRecord::Schema.define(version: 2020_04_30_135826) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "dislikes", "users"
-  add_foreign_key "dislikes", "videos"
   add_foreign_key "likes", "users"
   add_foreign_key "likes", "videos"
   add_foreign_key "taggings", "tags"
