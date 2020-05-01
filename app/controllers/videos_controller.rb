@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
 class VideosController < ApplicationController
-  before_action :set_video, only: %i[show edit update destroy]
+  before_action :set_video, only: [:show, :edit, :update, :destroy, :vote]
+  respond_to :js, :json, :html
 
   # GET /videos
   # GET /videos.json
@@ -23,6 +24,14 @@ class VideosController < ApplicationController
 
   # GET /videos/1/edit
   def edit; end
+
+  def vote
+    if !current_user.liked? @video
+      @video.liked_by current_user
+    elsif current_user.liked? @video
+      @video.unliked_by current_user
+    end
+  end
 
   # POST /videos
   # POST /videos.json
