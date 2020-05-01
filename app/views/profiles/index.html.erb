@@ -1,0 +1,17 @@
+<h1>Profiles page</h1>
+<table>
+  <tr>
+    <th>Current Users</th>
+    <th></th>
+  </tr>
+  <% @user.each do |user| %>
+
+  <tr>
+
+    <td><a href=<%= profiles_path(:id => user.id)%>><%= user.username %></a></td>
+
+  </tr>
+
+  <% end %>
+
+</table>
