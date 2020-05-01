@@ -5,4 +5,5 @@ class User < ApplicationRecord
   has_many :likes, dependent: :destroy
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+  has_many :videos
 end
