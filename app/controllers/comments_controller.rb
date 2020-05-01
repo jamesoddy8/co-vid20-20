@@ -9,7 +9,7 @@ class CommentsController < ApplicationController
     if @comment.save
       ActionCable.server.broadcast 'room_channel',
       content: @comment.content,
-      commentor: @comment.user.email,
+      commentor: @comment.user.username,
       time_commented: @comment.created_at.strftime("%d/%m/%y %H:%M")
     end
   end
