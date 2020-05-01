@@ -4,7 +4,7 @@
   <p>Title: <%= link_to video.title, video %></p>
   <p>Description: <%= video.description %></p>
   <p>Tags: <%= raw video.all_tags %></p>
-  <p>By: <%= link_to video.user.email, '/users/' + video.user.id.to_s + '/profile' %> </p>
+  <p>By: <%= link_to video.user.username, '/users/' + video.user.id.to_s + '/profile' %> </p>
   <%= link_to 'Show', video %></td>
   <% if current_user === video.user %>
     <%= link_to 'Edit', edit_video_path(video) %>
