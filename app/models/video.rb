@@ -17,8 +17,12 @@ class Video < ApplicationRecord
    where("lower(users.username) LIKE :search OR lower(videos.title) LIKE :search OR lower(videos.description) LIKE :search OR lower(tags.name) LIKE :search", search: "%#{search.downcase}%").uniq
   #  WHY do we need .uniq here? where were the duplicates coming from??
   end
-
+  
   def all_tags
     self.tags.map(&:name).join(", ")
   end
 end
+
+# def self.search(search)
+#   where("lower(users.username) LIKE :search OR lower(videos.title) LIKE :search OR lower(videos.description) LIKE :search", search: "%#{search.downcase}%")
+# end
