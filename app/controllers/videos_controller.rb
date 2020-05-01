@@ -15,6 +15,7 @@ class VideosController < ApplicationController
   def show
     @comment = Comment.new
     @comments = Comment.where(video_id: params[:id])
+    @video.punch(request)
   end
 
   # GET /videos/new

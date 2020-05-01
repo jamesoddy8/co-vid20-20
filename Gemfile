@@ -57,3 +57,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'acts_as_votable'
 gem 'font-awesome-sass'
+gem 'punching_bag'

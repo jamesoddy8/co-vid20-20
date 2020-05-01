@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_30_135826) do
+ActiveRecord::Schema.define(version: 2020_05_01_093707) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,15 +45,6 @@ ActiveRecord::Schema.define(version: 2020_04_30_135826) do
     t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
-  create_table "dislikes", force: :cascade do |t|
-    t.bigint "video_id", null: false
-    t.bigint "user_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_dislikes_on_user_id"
-    t.index ["video_id"], name: "index_dislikes_on_video_id"
-  end
-
   create_table "likes", force: :cascade do |t|
     t.bigint "video_id", null: false
     t.bigint "user_id", null: false
@@ -61,6 +52,17 @@ ActiveRecord::Schema.define(version: 2020_04_30_135826) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_likes_on_user_id"
     t.index ["video_id"], name: "index_likes_on_video_id"
+  end
+
+  create_table "punches", id: :serial, force: :cascade do |t|
+    t.integer "punchable_id", null: false
+    t.string "punchable_type", limit: 20, null: false
+    t.datetime "starts_at", null: false
+    t.datetime "ends_at", null: false
+    t.datetime "average_time", null: false
+    t.integer "hits", default: 1, null: false
+    t.index ["average_time"], name: "index_punches_on_average_time"
+    t.index ["punchable_type", "punchable_id"], name: "punchable_index"
   end
 
   create_table "taggings", force: :cascade do |t|
@@ -125,8 +127,6 @@ ActiveRecord::Schema.define(version: 2020_04_30_135826) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "dislikes", "users"
-  add_foreign_key "dislikes", "videos"
   add_foreign_key "likes", "users"
   add_foreign_key "likes", "videos"
   add_foreign_key "taggings", "tags"
