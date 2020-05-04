@@ -8,28 +8,26 @@ end
     if @messages.length > 10
       @over_ten = true
       @messages = @messages[-10..-1]
+      # This only updates read status for last ≤10 messages 
       @messages.each do |message|
         if message.user_id != current_user.id
           Message.find(message.id).update(read: true)
         end
       end
-      # Message.find(@messages.all).update(read: true)
     end
     if params[:m]
-    # if params[:message]
       @over_ten = false
       @messages = @conversation.messages
-
+      Message.find(@messages.first.id).update(read: true)
       # Message.find(@messages).update(read: true)
 
     end
-    if @messages.last
-      if @messages.last.user_id != current_user.id
-        # @messages.last.read = true;
-        # find a way to change more than last
-        Message.find(@messages.last.id).update(read: true)
-      end
-    end
+    # if @messages.last
+    #   if @messages.last.user_id != current_user.id
+    #     # find a way to change more than last
+    #     Message.find(@messages.last.id).update(read: true)
+    #   end
+    # end
     @message = @conversation.messages.new
   end
 
