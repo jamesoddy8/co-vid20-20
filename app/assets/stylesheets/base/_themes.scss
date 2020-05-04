@@ -37,6 +37,9 @@ $themes: (
 );
 
 @mixin themify($themes: $themes) {
+  @include transition(color 0.5s ease);
+  @include transition(background-color 0.5s ease);
+
   @each $theme, $map in $themes {
     .theme-#{$theme} & {
       $theme-map: () !global;
@@ -57,4 +60,11 @@ $themes: (
 }
 @function themed($key) {
   @return map-get($theme-map, $key);
+}
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
 }
