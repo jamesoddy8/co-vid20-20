@@ -10,11 +10,13 @@
 	<body>
 		<div class="container">
 			<header>
-				<a id="path">HOME</a>
-				<%= form_tag(search_page_path, method: :get) do %>
-					<%= search_field_tag :search, params[:search], placeholder: "Search" %>
-					<%= button_tag "Search", :name => nil %>
-				<% end %>
+				<a id="logo-text">HOME</a>
+				<div id="headerSearchbar">
+					<%= form_tag(search_page_path, method: :get) do %>
+						<%= search_field_tag :search, params[:search], placeholder: "Search" %>
+						<%= button_tag "Search", :name => nil %>
+					<% end %>
+				</div>
 				<% if current_user %>
 					<%= link_to 'Sign out', destroy_user_session_path, method: :delete%>
 				<% else %>
