@@ -4,6 +4,7 @@
       "/Users/student/Desktop/Projects/co-vid20-20/spec/models/comment_spec.rb": {
         "lines": [
           1,
+          1,
           null,
           1,
           2,
@@ -91,6 +92,12 @@
           null,
           1,
           1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
           null,
           null
         ]
@@ -648,6 +655,10 @@
         "lines": [
           1,
           1,
+          null,
+          null,
+          null,
+          1,
           1,
           1,
           null,
@@ -681,6 +692,8 @@
           1,
           1,
           1,
+          1,
+          1,
           null,
           null,
           null,
@@ -690,6 +703,11 @@
           1,
           1,
           1,
+          null,
+          1,
+          1,
+          1,
+          null,
           null,
           null
         ]
@@ -704,6 +722,22 @@
           1,
           null,
           1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
           null
         ]
       },

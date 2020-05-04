@@ -1,8 +1,16 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  resources :messages
+  resources :conversations do
+    resources :messages
+  end
+  
 
+  get 'relationships/create'
+  resources :relationships
   resources :profile_pictures
+
   resources :comments, only: [:new, :create]
   resources :videos do
     resources :likes
@@ -10,7 +18,7 @@ Rails.application.routes.draw do
       put "like" => "videos#vote"
     end
   end
-
+  
   get 'home/index'
   get '/search', to: 'videos#search', as: 'search_page'
   root to: 'home#index'
@@ -18,4 +26,9 @@ Rails.application.routes.draw do
   get 'profiles/all', to: 'profiles#index'
   get 'profiles/:id', controller: 'profiles', action: 'show', as: 'profiles'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  resources :users do
+    member do
+      get :following, :followers
+    end
+  end
 end

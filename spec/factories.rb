@@ -1,4 +1,18 @@
 FactoryBot.define do
+  factory :relationship do
+    
+  end
+
+
+
+  factory :message do
+    
+  end
+
+  factory :conversation do
+    
+  end
+
   factory :profile_picture do
     caption { "MyText" }
     user { "1" }

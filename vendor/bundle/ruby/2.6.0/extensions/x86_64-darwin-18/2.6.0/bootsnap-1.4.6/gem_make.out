@@ -1,0 +1,15 @@
+current directory: /Users/student/Projects/co-vid20-20/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.4.6/ext/bootsnap
+/Users/student/.rvm/rubies/ruby-2.6.3/bin/ruby -I /Users/student/.rvm/rubies/ruby-2.6.3/lib/ruby/site_ruby/2.6.0 -r ./siteconf20200504-12406-1djocoe.rb extconf.rb
+creating Makefile
+
+current directory: /Users/student/Projects/co-vid20-20/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.4.6/ext/bootsnap
+make "DESTDIR=" clean
+
+current directory: /Users/student/Projects/co-vid20-20/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.4.6/ext/bootsnap
+make "DESTDIR="
+compiling bootsnap.c
+linking shared-object bootsnap/bootsnap.bundle
+
+current directory: /Users/student/Projects/co-vid20-20/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.4.6/ext/bootsnap
+make "DESTDIR=" install
+/usr/local/opt/coreutils/bin/ginstall -c -m 0755 bootsnap.bundle ./.gem.20200504-12406-177bta6/bootsnap
