@@ -1,0 +1,25 @@
+$dark_mode: false;
+$_bg_base_dark: #1c1c1c;
+$_contrast_on_dark: #e9e9e9;
+$_bg_base_light: #ffffff;
+$_contrast_on_light: #3c3c3c;
+
+$base_colour: if($dark_mode, $_bg_base_dark, $_bg_base_light);
+$contrast_colour: if($dark_mode, $_contrast_on_dark, $_contrast_on_light);
+$primary: #6ad0b0;
+$secondary: #aed6f9;
+
+@function base($elevation) {
+  @if ($dark_mode) {
+    @return scale-color($base_colour, $lightness: $elevation);
+  } @else {
+    @return scale-color($base_colour, $lightness: - ($elevation/5));
+  }
+}
+@function contrast($subtlety) {
+  @if ($dark_mode) {
+    @return scale-color($contrast_colour, $lightness: - ($subtlety/5));
+  } @else {
+    @return scale-color($contrast_colour, $lightness: ($subtlety));
+  }
+}
