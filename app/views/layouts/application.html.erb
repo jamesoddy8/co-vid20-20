@@ -11,7 +11,7 @@
   <body>
 
     <header>
-
+      <a id="path">HOME</a>
       <%= form_tag(search_page_path, method: :get) do %>
       <%= search_field_tag :search, params[:search], placeholder: "Search" %>
       <%= button_tag "Search", :name => nil %>
@@ -24,7 +24,10 @@
 
     <%= link_to 'Sign in', new_user_session_path%>
     <% end %>
+    <div id="search"></div>
   </header>
+  <main>
   <%= yield %>
+  </main>
 </body>
 </html>
