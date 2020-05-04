@@ -28,6 +28,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'foundation-rails'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
+gem 'bundler'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
@@ -43,6 +44,7 @@ group :development, :test do
   gem 'rails-controller-testing'
   gem 'factory_bot_rails'
   gem 'shoulda-matchers'
+  gem 'test-unit'
 end
 
 group :development do
