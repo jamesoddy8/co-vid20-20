@@ -51,6 +51,7 @@ ActiveRecord::Schema.define(version: 2020_05_04_095438) do
     t.integer "recipient_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "likes", force: :cascade do |t|
     t.bigint "video_id", null: false
