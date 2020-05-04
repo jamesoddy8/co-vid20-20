@@ -1,5 +1,8 @@
-<h1>Videos</h1>
-
+<h1><%= @current_profile.email %>'s profile</h1>
+<div style="width:400px; height:auto">
+  <%= image_tag(@profile_picture.last.image, style:'width:100%') %>
+</div>
+<h3>This users videos</h3>
   <% @videos.each do |video| %>
   <p>Title: <%= link_to video.title, video %></p>
   <p>Description: <%= video.description %></p>

@@ -1,4 +1,9 @@
 FactoryBot.define do
+  factory :profile_picture do
+    caption { "MyText" }
+    user { nil }
+  end
+
 
   factory :user do
     id {"2"}
