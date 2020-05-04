@@ -4,11 +4,12 @@ before_action do
 end
 
   def index
-    @messages = @conversation.messages
+    # @messages = Message.find(:all, :order => "id desc", :limit => 5)
+    @messages = @conversation.messages.order(id: :asc)
     if @messages.length > 10
       @over_ten = true
       @messages = @messages[-10..-1]
-      # This only updates read status for last ≤10 messages 
+      # This only updates read status for last ≤10 messages
       @messages.each do |message|
         if message.user_id != current_user.id
           Message.find(message.id).update(read: true)
@@ -17,8 +18,8 @@ end
     end
     if params[:m]
       @over_ten = false
-      @messages = @conversation.messages
-      Message.find(@messages.first.id).update(read: true)
+      @messages = @conversation.messages.order(id: :asc)
+      Message.all.update(read: true)
       # Message.find(@messages).update(read: true)
 
     end
@@ -48,4 +49,3 @@ end
   end
 
 end
-
