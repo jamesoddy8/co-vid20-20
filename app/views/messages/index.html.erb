@@ -1,0 +1,29 @@
+<% if @over_ten %>
+ <%= link_to 'Show Previous', '?m=all' %>
+<% end %>
+<div>
+ <% @messages.each do |message| %>
+  <% if message.content %>
+   <% user = User.find(message.user_id) %>
+   <div>
+    <div>
+     <div><strong><%= user.username %></strong><%= message.message_time %></div>
+      <div>
+       <div>
+         <%= message.content %>
+      </div>
+    </div>
+   </div>
+ </div>
+ <% end %>
+<% end %>
+</div>
+<%= form_for [@conversation, @message] do |f| %>
+ <div>
+   <%= f.text_area :content %>
+ </div>
+ <%= f.text_field :user_id, value: current_user.id, type: "hidden" %>
+ <div>
+   <%= f.submit "Add Reply" %>
+ </div>
+<% end %>
