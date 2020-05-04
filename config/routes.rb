@@ -1,10 +1,16 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  resources :messages
+  resources :conversations do
+    resources :messages
+  end
+  
 
   get 'relationships/create'
   resources :relationships
   resources :profile_pictures
+
   resources :comments, only: [:new, :create]
   resources :videos do
     resources :likes
