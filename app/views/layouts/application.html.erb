@@ -1,33 +1,42 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Covid2020</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-  <body>
-
-    <header>
-      <a id="path">HOME</a>
-      <%= form_tag(search_page_path, method: :get) do %>
-      <%= search_field_tag :search, params[:search], placeholder: "Search" %>
-      <%= button_tag "Search", :name => nil %>
-      <% end %>
-
-       <% if current_user %>
-    <%= link_to 'Sign out', destroy_user_session_path, method: :delete%>
-    <% else %>
-    <%= link_to 'Create an account', new_user_registration_path %>
-
-    <%= link_to 'Sign in', new_user_session_path%>
-    <% end %>
-    <div id="search"></div>
-  </header>
-  <main>
-  <%= yield %>
-  </main>
-</body>
+	<head>
+		<title>Covid2020</title>
+		<%= csrf_meta_tags %>
+		<%= csp_meta_tag %>
+		<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+		<%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+	</head>
+	<body>
+		<div class="container">
+			<header>
+				<a id="path">HOME</a>
+				<%= form_tag(search_page_path, method: :get) do %>
+					<%= search_field_tag :search, params[:search], placeholder: "Search" %>
+					<%= button_tag "Search", :name => nil %>
+				<% end %>
+				<% if current_user %>
+					<%= link_to 'Sign out', destroy_user_session_path, method: :delete%>
+				<% else %>
+					<%= link_to 'Create an account', new_user_registration_path %>
+					<%= link_to 'Sign in', new_user_session_path%>
+				<% end %>
+				<%# <div id="search"></div> %>
+				<!-- Header content -->
+			</header>
+			<nav>
+				<!-- Navigation -->
+			</nav>
+			<main>
+				<!-- Main content -->
+				<%= yield %>
+			</main>
+			<aside>
+				<!-- Sidebar -->
+			</aside>
+			<footer>
+				<!-- Footer content -->
+			</footer>
+		</div>
+	</body>
 </html>

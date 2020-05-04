@@ -13,3 +13,64 @@
  *= require_tree .
  *= require_self
  */
+
+@import "base/colour";
+@import "base/typography";
+@import "base/grid";
+
+body {
+  margin: 0;
+  font-family: "Brandon Grotesque", sans-serif;
+  background-color: base(0);
+  color: $contrast_colour;
+}
+main {
+  //padding: 20px;
+}
+
+header {
+  //padding: 1em;
+  background-color: base(0);
+  //width: 100%;
+  filter: drop-shadow(0px 3px 5px rgba(0, 0, 0, 0.1));
+  #path {
+    font-weight: 900;
+    font-family: "Brandon Grotesque";
+    font-size: 30px;
+    //text-align: left;
+    color: contrast(20);
+  }
+  #search {
+    //width: 603px;
+    //height: 60px;
+    border-radius: 10px;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+  }
+}
+
+h1 {
+  margin: 0px;
+  font-weight: 500;
+  font-family: "Brandon Grotesque";
+  font-size: 32px;
+  text-align: left;
+  color: contrast(0);
+}
+h2 {
+  margin: 0px;
+  font-family: "Brandon Grotesque";
+  font-weight: normal;
+  font-size: 24px;
+  text-align: left;
+  color: contrast(0);
+}
+p {
+  margin-top: 4px;
+  margin-bottom: 20px;
+  //width: 60%;
+  font-family: "Brandon Grotesque";
+  font-weight: 400;
+  font-size: 20px;
+  text-align: left;
+  color: contrast(0);
+}
