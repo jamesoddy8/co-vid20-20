@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
+  it { is_expected.to be }
 
   before do
     @user = User.new(email: 'example@example.com',

@@ -30,7 +30,7 @@
     
   </video>
   <br>
-  <span class="likes-count"><%= @video.get_upvotes.size %></span> <span>Number of Views: <%= @video.hits %> </span>
+  <span class="likes-count">Likes: <%= @video.get_upvotes.size %></span> <span>Number of Views: <%= @video.hits %> </span>
   <%= link_to like_video_path(@video), class:"like-btn", method: :put, remote: :true do %>
   <br>
     <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
