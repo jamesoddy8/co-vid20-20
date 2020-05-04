@@ -3,7 +3,9 @@ require 'rails_helper'
 RSpec.describe User, type: :model do
 
   before do
-    @user = User.new(email: 'example@example.com',
+    @user = User.create(email: 'example@example.com',
+            password: 'password', password_confirmation: 'password')
+    @user2 = User.create(email: 'example2@example.com',
             password: 'password', password_confirmation: 'password')
   end
   it 'should work with factory bot' do
@@ -35,5 +37,15 @@ RSpec.describe User, type: :model do
   it 'password should be present' do
     @user.password = @user.password_confirmation = '' * 5
     expect(@user.valid?).to eq(false)
+  end
+
+  it 'can follow another user' do
+    @user.follow(@user2)
+    expect(@user.following.count).to eq 1
+  end
+
+  it 'can have another user follow them' do
+    @user2.follow(@user)
+    expect(@user.followers.count).to eq 1
   end
 end
