@@ -1,7 +1,37 @@
 <% if @over_ten %>
  <%= link_to 'Show Previous', '?m=all' %>
 <% end %>
-<div>
+
+<div id="messages" style="width: 80%;height: 200px;border:solid black;margin-top: 20px;overflow:scroll">
+
+  <% @messages.each do |message| %>
+
+  <% if message.content %>
+   <% user = User.find(message.user_id) %>
+   <div>
+    <div class="direct-message">
+     <div><strong><%= user.username %></strong> <%= message.message_time %></div>
+      <div>
+       <%= message.content %>
+      </div>
+   </div>
+  </div>
+  <% end %>
+  <% end %>
+</div>
+
+
+<%= form_for [@conversation, @message], remote: true do |f| %>
+ <div>
+   <%= f.text_area :content %>
+ </div>
+ <%= f.text_field :user_id, value: current_user.id, type: "hidden" %>
+ <div>
+   <%= f.submit "Add Reply" %>
+ </div>
+<% end %>
+
+<!--<div>
  <% @messages.each do |message| %>
   <% if message.content %>
    <% user = User.find(message.user_id) %>

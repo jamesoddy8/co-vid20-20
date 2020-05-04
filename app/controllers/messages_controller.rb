@@ -39,7 +39,10 @@ end
   def create
     @message = @conversation.messages.new(message_params)
     if @message.save
-      redirect_to conversation_messages_path(@conversation)
+      ActionCable.server.broadcast 'messages_channel',
+      content: @message.content,
+      user: @message.user.username,
+      message_sent: @message.created_at.strftime("%d/%m/%y %H:%M")
     end
   end
 
