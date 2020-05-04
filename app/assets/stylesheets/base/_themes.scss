@@ -1,0 +1,60 @@
+$base-dark: #1c1c1c;
+$base-light: #ffffff;
+$contrast-on-dark: #e9e9e9;
+$contrast-on-light: #3c3c3c;
+
+$themes: (
+  light: (
+    base-0: $base-light,
+    base-1: scale-color($base-light, $lightness: -3),
+    base-2: scale-color($base-light, $lightness: -7),
+    base-3: scale-color($base-light, $lightness: -11),
+    contrast-0: $contrast-on-light,
+    contrast-1: rgba($contrast-on-light, 0.8),
+    contrast-2: rgba($contrast-on-light, 0.6),
+    contrast-3: rgba($contrast-on-light, 0.4),
+  ),
+  dark: (
+    base-0: $base-dark,
+    base-1: scale-color($base-dark, $lightness: 5),
+    base-2: scale-color($base-dark, $lightness: 10),
+    base-3: scale-color($base-dark, $lightness: 15),
+    contrast-0: $contrast-on-dark,
+    contrast-1: rgba($contrast-on-dark, 0.8),
+    contrast-2: rgba($contrast-on-dark, 0.6),
+    contrast-3: rgba($contrast-on-dark, 0.4),
+  ),
+  thermal: (
+    base-0: #0d1032,
+    base-1: #1a1c50,
+    base-2: #26235f,
+    base-3: #4d2e76,
+    contrast-0: #faf2a6,
+    contrast-1: #fbf05a,
+    contrast-2: #eca340,
+    contrast-3: #dc5844,
+  ),
+);
+
+@mixin themify($themes: $themes) {
+  @each $theme, $map in $themes {
+    .theme-#{$theme} & {
+      $theme-map: () !global;
+      @each $key, $submap in $map {
+        $value: map-get(map-get($themes, $theme), "#{$key}");
+        $theme-map: map-merge(
+          $theme-map,
+          (
+            $key: $value,
+          )
+        ) !global;
+      }
+
+      @content;
+      $theme-map: null !global;
+    }
+  }
+}
+@function themed($key) {
+  @return map-get($theme-map, $key);
+}

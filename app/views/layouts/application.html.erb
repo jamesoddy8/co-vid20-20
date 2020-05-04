@@ -1,13 +1,26 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<script type="text/javascript">
+			function changeClass() {
+			          var app = document.getElementById('app')
+			          if(app.className == "theme-dark")
+			          {
+			            app.className = "theme-light"
+			          }
+			          else
+			          {
+			            app.className = "theme-dark"
+			          }
+			}
+		</script>
 		<title>Covid2020</title>
 		<%= csrf_meta_tags %>
 		<%= csp_meta_tag %>
 		<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 		<%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 	</head>
-	<body>
+	<body class="theme-light" id="app">
 		<div class="container">
 			<header>
 				<a id="logo-text">HOME</a>
@@ -29,9 +42,10 @@
 			<nav>
 				<!-- Navigation -->
 			</nav>
-			<main>
+			<main >
 				<!-- Main content -->
 				<%= yield %>
+				<button class="default" onclick="changeClass()" id="myButton">Click Here!</button>
 			</main>
 			<aside>
 				<!-- Sidebar -->

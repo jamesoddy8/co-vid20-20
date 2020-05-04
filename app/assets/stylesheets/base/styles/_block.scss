@@ -1,0 +1,11 @@
+@import "../shadow";
+@import "../themes";
+@mixin block($base, $contrast, $shadow-level) {
+  @include themify($themes) {
+    color: themed($contrast);
+    background-color: themed($base);
+  }
+  border: none;
+  border-radius: 10px;
+  filter: shadow($shadow-level);
+}

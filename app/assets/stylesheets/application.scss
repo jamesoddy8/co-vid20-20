@@ -14,31 +14,35 @@
  *= require_self
  */
 
-@import "base/colour";
+@import "base/themes";
 @import "base/typography";
 @import "base/grid";
 @import "base/shadow";
-@import "base/styles/rect";
+@import "base/styles/block";
 
-body {
+.container {
   font-family: "Brandon Grotesque", sans-serif;
-  background-color: base(0);
-  color: $contrast_colour;
+  @include themify($themes) {
+    background-color: themed(base-0);
+    color: themed(contrast-0);
+  }
 }
 
 header {
   padding: 1em;
-  background-color: base(0);
-  //filter: $shadow-1;
+  @include block(base-0, contrast-0, 1);
+  border-radius: 0;
   #logo-text {
     font-weight: 900;
     font-size: 30px;
-    color: contrast(20);
+    @include themify($themes) {
+      color: themed(contrast-1);
+    }
   }
 }
 #headerSearchbar {
   input[type="search"] {
-    @include block(10, 25, 1);
+    @include block(base-1, contrast-0, 1);
     font-size: 16px;
     background-image: url("SearchIcon.svg");
     background-size: 1.5em;
@@ -46,14 +50,11 @@ header {
     background-repeat: no-repeat;
     padding: 12px 20px 12px 40px;
   }
-  //  button {
-  //    visibility: hidden;
-  //  }
   form {
     display: flex;
   }
   button {
-    @include block(10, 25, 1);
+    @include block(base-1, contrast-0, 1);
     margin-left: 5px;
     display: flex;
     justify-content: flex-end;
@@ -67,18 +68,24 @@ h1 {
   margin: 0px;
   font-weight: 500;
   font-size: 32px;
-  color: contrast(0);
+  @include themify($themes) {
+    color: themed(contrast-0);
+  }
 }
 h2 {
   margin: 0px;
   font-family: "Brandon Grotesque";
   font-size: 24px;
-  color: contrast(0);
+  @include themify($themes) {
+    color: themed(contrast-0);
+  }
 }
 p {
   margin-top: 4px;
   margin-bottom: 20px;
   font-weight: 400;
   font-size: 20px;
-  color: contrast(0);
+  @include themify($themes) {
+    color: themed(contrast-0);
+  }
 }
