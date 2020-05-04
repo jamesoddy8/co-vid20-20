@@ -6,6 +6,7 @@ class Video < ApplicationRecord
   has_many :tags, through: :taggings
   has_many :likes, dependent: :destroy
   acts_as_votable
+  acts_as_punchable
 
   def all_tags=(names)
     self.tags = names.split(", ").map do |name|

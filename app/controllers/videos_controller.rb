@@ -15,15 +15,21 @@ class VideosController < ApplicationController
   def show
     @comment = Comment.new
     @comments = Comment.where(video_id: params[:id])
+    @video.punch(request)
+    @profiles_id = @video.profiles_id
   end
 
   # GET /videos/new
   def new
+    @profiles_id = params[:profiles_id]
     @video = Video.new
   end
 
   # GET /videos/1/edit
-  def edit; end
+  def edit
+    @video = Video.find(params[:id])
+    @profiles_id = @video.profiles_id
+  end
 
   def vote
     if !current_user.liked? @video
@@ -71,6 +77,8 @@ class VideosController < ApplicationController
       format.html { redirect_to videos_url, notice: 'Video was successfully destroyed.' }
       format.json { head :no_content }
     end
+    @profiles_id = @video.profiles_id
+    redirect_to profiles_path(id: @profiles_id)
   end
 
   def search
@@ -98,6 +106,6 @@ private
 
   # Only allow a list of trusted parameters through.
   def video_params
-    params.require(:video).permit(:title, :description, :clip, :thumbnail, :search, :all_tags)
+    params.require(:video).permit(:title, :description, :clip, :thumbnail, :search, :all_tags, :profiles_id)
   end
 end
