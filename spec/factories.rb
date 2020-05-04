@@ -15,7 +15,7 @@ FactoryBot.define do
 
   factory :profile_picture do
     caption { "MyText" }
-    user { nil }
+    user { "1" }
   end
 
 

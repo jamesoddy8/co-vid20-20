@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Video, type: :model do
+  it { is_expected.to be }
 
   it 'video has a title' do
     video = Video.new(title: "Hello")
@@ -21,12 +22,5 @@ RSpec.describe Video, type: :model do
     video = Video.new(all_tags: "video" "animal" "rabbit")
     expect(video.all_tags).to eq "video" "animal" "rabbit"
   end
-
-  # it 'can upload clip' do
-  #   @file = fixture_file_upload('/Users/jamesoddy/desktop/makers/co-vid20-20/testfiles/byetudemo.mov')
-  #   video = Video.new
-  #   video :uploadClip, :upload => @file
-  #   response.should be_success
-  # end
 
 end
