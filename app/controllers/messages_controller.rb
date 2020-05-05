@@ -4,7 +4,7 @@ before_action do
 end
 
   def index
-    # @messages = Message.find(:all, :order => "id desc", :limit => 5)
+    @over_ten = false
     @messages = @conversation.messages.order(id: :asc)
     if @messages.length > 10
       @over_ten = true
@@ -17,18 +17,10 @@ end
       end
     end
     if params[:m]
-      @over_ten = false
       @messages = @conversation.messages.order(id: :asc)
       Message.all.update(read: true)
-      # Message.find(@messages).update(read: true)
 
     end
-    # if @messages.last
-    #   if @messages.last.user_id != current_user.id
-    #     # find a way to change more than last
-    #     Message.find(@messages.last.id).update(read: true)
-    #   end
-    # end
     @message = @conversation.messages.new
   end
 
