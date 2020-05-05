@@ -60,3 +60,28 @@ As a User,
 So that i can see what is availble on the website,
 I would like to have access to a search bar
 ```
+```ruby
+As a User,
+So i can show off my videos,
+I would like to have a profile page
+```
+```ruby,
+As a User,
+So i can show people what i look like,
+I would like to upload a profile picture
+```
+```ruby
+As a User,
+So i can show off even more appreciation,
+I would like to be able to donate to a creator
+```
+```ruby
+As a user,
+So that i can contact other users,
+I would like to send and receive message
+```
+```ruby
+As a user, 
+So that i can keep track of people i enjoy,
+I would like the option to follow them
+```
