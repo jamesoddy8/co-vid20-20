@@ -1,4 +1,4 @@
-<h1><%= @current_profile.email %>'s profile</h1>
+<h1><%= @current_profile.username %>'s profile</h1>
 <% if @profile_picture != nil %>
   <div style="width:400px; height:auto">
     <%= image_tag(@profile_picture.last.image, style:'width:100%') %>
