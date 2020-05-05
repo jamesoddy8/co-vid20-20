@@ -1,5 +1,5 @@
 require 'fileutils'
-require 'test/unit'
+# require 'test/unit'
 require 'mocha'
 
 if ENV['BUNDLE_GEMFILE'].to_s.empty?

@@ -30,3 +30,8 @@
 yarn-debug.log*
 .yarn-integrity
 .notes.txt
+
+/config/credentials/production.key
+
+#Ignore vendor bundle
+/vendor
