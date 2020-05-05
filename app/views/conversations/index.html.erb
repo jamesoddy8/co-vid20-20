@@ -3,6 +3,11 @@
  <div>
   <div>
    <% @conversations.each do |conversation| %>
+    <% unread_in_conversation %>
+    <%= @output.class %>
+    <% if @output == true %>
+     <%= "x" %>
+     <% end %>
    <% if conversation.sender_id == current_user.id || conversation.recipient_id == current_user.id %>
     <% if conversation.sender_id == current_user.id %>
       <% recipient = User.find(conversation.recipient_id) %>
@@ -21,7 +26,7 @@
    <% @users.each do |user| %>
     <% if user.id != current_user.id %>
      <div>
-   <%= user.username %> <%= link_to 'Message me!', conversations_path(sender_id: current_user.id, recipient_id: user.id), method: 'post'%>
+   <%= user.username %> <%= link_to 'Message me!', conversations_path(sender_id: current_user.id, recipient_id: user.id), method: 'post'%> <br>
  </div>
   <% end %>
  <% end %>

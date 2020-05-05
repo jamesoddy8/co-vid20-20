@@ -10,6 +10,19 @@ class Conversation < ApplicationRecord
     where("(conversations.sender_id = #{sender_id} AND conversations.recipient_id = #{recipient_id}) OR (conversations.sender_id = #{recipient_id} AND conversations.recipient_id = #{sender_id})")
   end
 
+  # def unread_in_conversation
+  #   @unread = []
+  #     @conversation.messages.each do |message|
+  #       if message.read == false
+  #         # if message.user_id != current_user.id
+  #           @unread << message
+  #         # end
+  #       end
+  #     end
+  #     @unread.length == 0 ? @output = false : @output = true
+  #     return @output
+  #   end
+
 end
 
 

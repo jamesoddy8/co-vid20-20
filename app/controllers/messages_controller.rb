@@ -6,7 +6,8 @@ end
   def index
     @over_ten = false
     @messages = @conversation.messages.order(id: :asc)
-    puts unread_in_conversation
+    # puts "-=-=-=-=-=-=-=-=-=-=-=-=-"
+    # unread_in_conversation
     if @messages.length > 10
       @over_ten = true
       @messages = @messages[-10..-1]
@@ -14,13 +15,17 @@ end
       @messages.each do |message|
         if message.user_id != current_user.id
           Message.find(message.id).update(read: true)
+          # @messages.length.times do
+          #   @unread.pop
+          # end
+
         end
       end
     end
     if params[:m]
       @messages = @conversation.messages.order(id: :asc)
       Message.all.update(read: true)
-
+      # @output = false
     end
     @message = @conversation.messages.new
   end
@@ -35,20 +40,6 @@ end
       redirect_to conversation_messages_path(@conversation)
     end
   end
-
-  def unread_in_conversation
-    @unread = []
-    @conversation.messages.each do |message|
-      if message.read == false
-        @unread << message
-      end
-    end
-    # Message.all(:conditions => ["read = ?", false])
-    puts '------------'
-    p @unread
-    # Client.first(:conditions => ["orders_count = ?", params[:orders]])
-  end
-
 
   private
   def message_params
