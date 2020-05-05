@@ -5,7 +5,9 @@
 <%= link_to 'New Video', new_video_path %>
 </div>
   <% @videos.each do |video| %>
-      <h2><%= link_to video.title, video %></h2>
+    <div class="link-h2">
+      <%= link_to video.title, video %>
+    </div>
       <p><%= video.description %></p>
       <caption><%= raw video.all_tags %></caption>
       <p>By <strong><%= link_to video.user.username, '/profiles/' + video.user.id.to_s %><strong> </p>

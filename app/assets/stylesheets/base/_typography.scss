@@ -30,7 +30,7 @@
   font-style: normal;
 }
 
-h1 {
+@mixin h1 {
   margin: 0px;
   font-weight: 500;
   font-size: 32px;
@@ -38,7 +38,8 @@ h1 {
     color: themed(contrast-0);
   }
 }
-h2 {
+
+@mixin h2 {
   margin: 0px;
   font-family: "Brandon Grotesque";
   font-size: 24px;
@@ -46,17 +47,38 @@ h2 {
     color: themed(contrast-0);
   }
 }
-p {
+
+@mixin h3 {
+  margin: 0px;
+  font-family: "Brandon Grotesque";
+  font-size: 24px;
+  @include themify($themes) {
+    color: themed(contrast-2);
+  }
+}
+
+@mixin caption {
   margin-top: 4px;
   margin-bottom: 20px;
   font-weight: 400;
   font-size: 16px;
   @include themify($themes) {
-    color: themed(contrast-0);
+    color: themed(contrast-3);
   }
 }
 
-a {
+@mixin p {
+  margin-top: 4px;
+  margin-bottom: 20px;
+  font-weight: 400;
+  font-size: 16px;
+  @include themify($themes) {
+    color: themed(contrast-1);
+  }
+}
+
+@mixin a {
+  text-decoration-line: none;
   margin-top: 4px;
   margin-bottom: 20px;
   font-weight: 400;
@@ -65,6 +87,44 @@ a {
     color: themed(hyperlink);
   }
 }
+
+h1 {
+  @include h1;
+}
+h2 {
+  @include h2;
+}
+h3 {
+  @include h3;
+}
+caption {
+  @include caption;
+}
+p {
+  @include p;
+}
+
+a {
+  @include a;
+}
+
+.link-h1 {
+  a {
+    @include h1;
+  }
+}
+
+.link-h2 {
+  a {
+    @include h2;
+  }
+}
+.link-h3 {
+  a {
+    @include h3;
+  }
+}
+
 .link-button {
   border-radius: 5px;
   padding: 2px 5px 0px 4px;
