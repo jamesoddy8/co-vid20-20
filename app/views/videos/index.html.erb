@@ -1,11 +1,14 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Videos</h1>
+<h1>All Videos</h1>
+<div class="link-button">
+<%= link_to 'New Video', new_video_path %>
+</div>
   <% @videos.each do |video| %>
-      <p>Title: <%= link_to video.title, video %></p>
-      <p>Description: <%= video.description %></p>
-      <p>Tags: <%= raw video.all_tags %></p>
-      <p>By: <%= link_to video.user.username, '/profiles/' + video.user.id.to_s %> </p>
+      <h2><%= link_to video.title, video %></h2>
+      <p><%= video.description %></p>
+      <caption><%= raw video.all_tags %></caption>
+      <p>By <strong><%= link_to video.user.username, '/profiles/' + video.user.id.to_s %><strong> </p>
       <%= link_to 'Show', video %></td>
       <% if current_user === video.user %>
         <%= link_to 'Edit', edit_video_path(video) %>
@@ -13,4 +16,3 @@
       <% end %>
   <% end %>
 <br>
-<%= link_to 'New Video', new_video_path %>

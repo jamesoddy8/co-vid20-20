@@ -50,7 +50,7 @@ p {
   margin-top: 4px;
   margin-bottom: 20px;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 16px;
   @include themify($themes) {
     color: themed(contrast-0);
   }
@@ -63,5 +63,22 @@ a {
   font-size: 16px;
   @include themify($themes) {
     color: themed(hyperlink);
+  }
+}
+.link-button {
+  border-radius: 5px;
+  padding: 2px 5px 0px 4px;
+  display: inline-block;
+  @include themify($themes) {
+    border: 1px solid themed(base-2);
+    background-color: themed(base-1);
+  }
+  a {
+    text-decoration-line: none;
+    font-weight: 400;
+    font-size: 16px;
+    @include themify($themes) {
+      color: themed(contrast-0);
+    }
   }
 }
