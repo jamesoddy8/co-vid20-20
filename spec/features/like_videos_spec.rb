@@ -9,8 +9,15 @@ RSpec.feature "like videos", type: :feature do
     create_video
     click_link "Back"
     click_link "Show"
-    # click_on(class: "fa fa-thumbs-up")
-    # page.execute_script('$.find(".fa fa-thumbs-up")[0].click()')
     expect(page).to have_content("Likes:")
   end
+
+  # scenario "A user can like a video" do
+  #   create_user_and_sign_up
+  #   visit "/videos"
+  #   create_video
+  #   click_link "Back"
+  #   click_link "Show"
+  #   expect(page).to have_content("Likes: 1")
+  # end
 end

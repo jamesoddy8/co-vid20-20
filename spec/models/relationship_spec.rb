@@ -1,5 +1,6 @@
 require 'rails_helper'
 RSpec.describe Relationship, type: :model do
+  it { is_expected.to be }
 
   describe "validations" do
     it { is_expected.to validate_presence_of :follower_id }

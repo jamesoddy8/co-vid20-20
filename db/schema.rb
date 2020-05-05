@@ -45,7 +45,6 @@ ActiveRecord::Schema.define(version: 2020_05_04_095438) do
     t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
-
   create_table "conversations", force: :cascade do |t|
     t.integer "sender_id"
     t.integer "recipient_id"
@@ -60,7 +59,17 @@ ActiveRecord::Schema.define(version: 2020_05_04_095438) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_likes_on_user_id"
     t.index ["video_id"], name: "index_likes_on_video_id"
+  end
 
+  create_table "messages", force: :cascade do |t|
+    t.text "content"
+    t.bigint "conversation_id"
+    t.bigint "user_id"
+    t.boolean "read", default: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["conversation_id"], name: "index_messages_on_conversation_id"
+    t.index ["user_id"], name: "index_messages_on_user_id"
   end
 
   create_table "profile_pictures", force: :cascade do |t|
@@ -82,7 +91,6 @@ ActiveRecord::Schema.define(version: 2020_05_04_095438) do
     t.index ["punchable_type", "punchable_id"], name: "punchable_index"
   end
 
-
   create_table "relationships", force: :cascade do |t|
     t.integer "follower_id"
     t.integer "followed_id"
@@ -91,18 +99,6 @@ ActiveRecord::Schema.define(version: 2020_05_04_095438) do
     t.index ["followed_id"], name: "index_relationships_on_followed_id"
     t.index ["follower_id", "followed_id"], name: "index_relationships_on_follower_id_and_followed_id", unique: true
     t.index ["follower_id"], name: "index_relationships_on_follower_id"
-  end
-
-  create_table "messages", force: :cascade do |t|
-    t.text "content"
-    t.bigint "conversation_id"
-    t.bigint "user_id"
-    t.boolean "read", default: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["conversation_id"], name: "index_messages_on_conversation_id"
-    t.index ["user_id"], name: "index_messages_on_user_id"
-
   end
 
   create_table "taggings", force: :cascade do |t|
@@ -131,6 +127,7 @@ ActiveRecord::Schema.define(version: 2020_05_04_095438) do
     t.string "username"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+    t.index ["username"], name: "index_users_on_username", unique: true
   end
 
   create_table "videos", force: :cascade do |t|
