@@ -1,24 +1,25 @@
-# README
+## Stephan Ellenberger | Orion Reed | John Baxter | Kuba Jawor | James Oddy | George Swarbrick 
+### Present:
+# Community Video 2020
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This project was completed remotely.
 
-Things you may want to cover:
+Our goal was to create a website that allowed creative people to post free tutorials on whatever they would like to share.
 
-* Ruby version
+As a user you have the option to follow, like and even donate to that creator.
 
-* System dependencies
+This project was inspired by the CO-VID 19 outbreak where most of the world had to respect social distancing and have most of their lives occur in the online world. 
 
-* Configuration
+# Quickstart
 
-* Database creation
+First, clone this repository. Then: 
 
-* Database initialization
+```ruby
+$ bundle install
+$ rails db:create
+$ rails db:migrate
 
-* How to run the test suite
+$ bundle exec rspec #to run the tests
+$ rails s #start the server
+```
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
