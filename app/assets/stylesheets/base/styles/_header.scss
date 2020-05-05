@@ -37,13 +37,6 @@ header {
     form {
       display: flex;
     }
-    button {
-      @include block(base-1, contrast-0, 1);
-      margin: 0px;
-      //margin-left: 5px;
-      display: flex;
-      justify-content: flex-end;
-    }
     display: flex;
     justify-content: center;
     align-items: center;
@@ -51,6 +44,7 @@ header {
   #account {
     @include themify($themes) {
       a {
+        padding-left: 10px;
         text-transform: uppercase;
         text-decoration: none;
         color: themed(contrast-1);
