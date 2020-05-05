@@ -1,0 +1,21 @@
+@import "themes";
+@import "transition";
+
+@mixin transition-group($group, $value) {
+  @each $element in $group {
+    #{$element} {
+      @include themify($themes) {
+        @include transition($value);
+      }
+    }
+  }
+}
+
+$color: h1, h2, p, a, b;
+@include transition-group($color, color 1s ease);
+
+$background: container, header, form, input, button, div;
+@include transition-group($background, background-color 1s ease);
+
+$filter: input;
+@include transition-group($filter, filter 0.5s ease);

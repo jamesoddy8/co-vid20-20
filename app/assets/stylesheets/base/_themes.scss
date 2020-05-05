@@ -2,6 +2,7 @@ $base-dark: #1c1c1c;
 $base-light: #ffffff;
 $contrast-on-dark: #e9e9e9;
 $contrast-on-light: #3c3c3c;
+$hyperlink: #67b8ff;
 
 $themes: (
   light: (
@@ -13,6 +14,7 @@ $themes: (
     contrast-1: rgba($contrast-on-light, 0.8),
     contrast-2: rgba($contrast-on-light, 0.6),
     contrast-3: rgba($contrast-on-light, 0.4),
+    hyperlink: $hyperlink,
   ),
   dark: (
     base-0: $base-dark,
@@ -23,6 +25,7 @@ $themes: (
     contrast-1: rgba($contrast-on-dark, 0.8),
     contrast-2: rgba($contrast-on-dark, 0.6),
     contrast-3: rgba($contrast-on-dark, 0.4),
+    hyperlink: $hyperlink,
   ),
   thermal: (
     base-0: #0d1032,
@@ -33,13 +36,11 @@ $themes: (
     contrast-1: #fbf05a,
     contrast-2: #eca340,
     contrast-3: #dc5844,
+    hyperlink: $hyperlink,
   ),
 );
 
 @mixin themify($themes: $themes) {
-  @include transition(color 0.5s ease);
-  @include transition(background-color 0.5s ease);
-
   @each $theme, $map in $themes {
     .theme-#{$theme} & {
       $theme-map: () !global;
@@ -60,11 +61,4 @@ $themes: (
 }
 @function themed($key) {
   @return map-get($theme-map, $key);
-}
-@mixin transition($args...) {
-  -webkit-transition: $args;
-  -moz-transition: $args;
-  -ms-transition: $args;
-  -o-transition: $args;
-  transition: $args;
 }

@@ -1,3 +1,4 @@
+@import "themes";
 @font-face {
   font-family: "Brandon Grotesque";
   src: url("fonts/Brandon_reg.otf");
@@ -27,4 +28,40 @@
   src: url("fonts/Brandon_blk.otf");
   font-weight: 900;
   font-style: normal;
+}
+
+h1 {
+  margin: 0px;
+  font-weight: 500;
+  font-size: 32px;
+  @include themify($themes) {
+    color: themed(contrast-0);
+  }
+}
+h2 {
+  margin: 0px;
+  font-family: "Brandon Grotesque";
+  font-size: 24px;
+  @include themify($themes) {
+    color: themed(contrast-0);
+  }
+}
+p {
+  margin-top: 4px;
+  margin-bottom: 20px;
+  font-weight: 400;
+  font-size: 20px;
+  @include themify($themes) {
+    color: themed(contrast-0);
+  }
+}
+
+a {
+  margin-top: 4px;
+  margin-bottom: 20px;
+  font-weight: 400;
+  font-size: 16px;
+  @include themify($themes) {
+    color: themed(hyperlink);
+  }
 }
