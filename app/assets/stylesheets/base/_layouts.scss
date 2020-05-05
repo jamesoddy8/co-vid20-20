@@ -1,3 +1,5 @@
+@import "shadow";
+
 .align-vertical {
   flex-flow: column wrap;
   display: flex;
@@ -16,3 +18,24 @@
   align-items: center;
 }
 
+.username-title-container {
+  flex-flow: row wrap;
+  display: flex;
+  justify-content: center; // delete this if you dont want it centered
+  align-items: center;
+}
+
+.video-card {
+  // flex-flow: row wrap;
+  // display: flex;
+  justify-content: center;
+  
+  padding: 5px;
+  margin: 10px;
+  box-shadow: 0px 0px 5px 2px black;
+  border-radius: 5px;
+}
+
+.followers-container {
+  width: 50%;
+}

@@ -43,7 +43,7 @@ class ProfilePicturesController < ApplicationController
   def update
     respond_to do |format|
       if @profile_picture.update(profile_picture_params)
-        format.html { redirect_to @profile_picture, notice: 'Profile picture was successfully updated.' }
+        format.html { redirect_to '/profiles/' + @profile_picture.user.id.to_s }
         format.json { render :show, status: :ok, location: @profile_picture }
       else
         format.html { render :edit }
@@ -57,7 +57,7 @@ class ProfilePicturesController < ApplicationController
   def destroy
     @profile_picture.destroy
     respond_to do |format|
-      format.html { redirect_to profile_pictures_url, notice: 'Profile picture was successfully destroyed.' }
+      format.html { redirect_to '/profiles/' + @profile_picture.user.id.to_s }
       format.json { head :no_content }
     end
   end
