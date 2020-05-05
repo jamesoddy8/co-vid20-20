@@ -29,7 +29,7 @@ class ProfilePicturesController < ApplicationController
     @profile_picture.user = current_user
     respond_to do |format|
       if @profile_picture.save
-        format.html { redirect_to @profile_picture, notice: 'Profile picture was successfully created.' }
+        format.html { redirect_to '/profiles/' + @profile_picture.user.id.to_s }
         format.json { render :show, status: :created, location: @profile_picture }
       else
         format.html { render :new }
