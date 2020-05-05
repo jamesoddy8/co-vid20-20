@@ -1,8 +1,11 @@
-<h1><%= @current_profile.email %>'s profile</h1>
-<% if @profilepicture != nil %>
-<div style="width:400px; height:auto">
-  <%= image_tag(@profile_picture.last.image, style:'width:100%') %>
-</div>
+<h1><%= @current_profile.username %>'s profile</h1>
+<% if @profile_picture != nil %>
+  <div style="width:400px; height:auto">
+    <%= image_tag(@profile_picture.last.image, style:'width:100%') %>
+  </div>
+<% end %>
+<% if current_user.id == params[:id].to_i %>
+  <%= link_to 'Upload a profile picture', new_profile_picture_path %>
 <% end %>
 <h3>This users videos</h3>
   <% @videos.each do |video| %>
