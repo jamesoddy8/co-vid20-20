@@ -33,6 +33,7 @@ gem 'bundler'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
+gem 'sprockets-rails', :require => 'sprockets/railtie'
 
 group :production, :development, :test do
   gem "rspec-rails", "~> 4.0"

@@ -1,0 +1,54 @@
+@import "../styles/block";
+header {
+  padding: 1em;
+  @include block(base-0, contrast-0, 1);
+  border-radius: 0;
+  #logo-and-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  img {
+    display: flex;
+    max-height: 50px;
+  }
+  #logo-text {
+    margin-left: 10px;
+    margin-bottom: 0px;
+    display: flex;
+    justify-content: flex-end;
+
+    font-weight: 900;
+    font-size: 25px;
+    @include themify($themes) {
+      color: themed(contrast-1);
+    }
+  }
+  #headerSearchbar {
+    input[type="search"] {
+      @include block(base-1, contrast-0, 1);
+      font-size: 16px;
+      background-image: url("SearchIcon.svg");
+      background-size: 1.5em;
+      background-position: 10px 10px;
+      background-repeat: no-repeat;
+      padding: 12px 20px 12px 40px;
+    }
+    form {
+      display: flex;
+    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #account {
+    @include themify($themes) {
+      a {
+        padding-left: 10px;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: themed(contrast-1);
+      }
+    }
+  }
+}
