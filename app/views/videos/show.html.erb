@@ -29,12 +29,34 @@
     <source src="<%= url_for(@video.clip) %>" type="video/mp4" />
     
   </video>
+  <% if current_user.id != @video.user.id %>
+  <h3>Follow this User</h3>
+    <% if !current_user.following?(@video.user) %>
+      <%= form_for(current_user.active_relationships.build) do |f| %>
+        <%= hidden_field_tag :followed_id, @video.user.id %>
+        <%= f.submit "Follow" %>
+      <% end %>
+    <% else %>
+      <%= form_for(current_user.active_relationships.find_by(followed_id: @video.user.id), html: {method: :delete }) do |f| %>
+        <%= f.submit "Unfollow" %>
+      <% end %>
+    <% end %>
+  <% end %>
   <br>
-  <span class="likes-count"><%= @video.get_upvotes.size %></span> <span>Number of Views: <%= @video.hits %> </span>
+  <span class="likes-count">Likes: <%= @video.get_upvotes.size %></span> <span>Number of Views: <%= @video.hits %> </span>
   <%= link_to like_video_path(@video), class:"like-btn", method: :put, remote: :true do %>
   <br>
     <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
   <% end %>
+
+  <h3>Did you like this video? Donate any amount to support this user.</h3>
+  <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+    <input type="hidden" name="cmd" value="_donations" />
+    <input type="hidden" name="business" value="<%= @video.user.email %>" />
+    <input type="hidden" name="currency_code" value="GBP" />
+    <input type="image" src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+    <img alt="" border="0" src="https://www.paypal.com/en_GB/i/scr/pixel.gif" width="1" height="1" />
+  </form>
   
   <div id="chatbox" style="width: 30%;height: 100px;border:solid black;margin-top: 20px;overflow:scroll">
     <% @comments.each do |comment| %>

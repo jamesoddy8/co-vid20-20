@@ -9,6 +9,21 @@ require 'capybara'
 require 'devise'
 # Add additional requires below this line. Rails is not loaded until this point!
 
+begin
+  require 'rspec/core/rake_task'
+  desc "Run all examples"
+  RSpec::Core::RakeTask.new(:spec) do |t|
+    t.rspec_opts = %w[--color]
+    t.pattern = 'spec/*_spec.rb'
+  end
+ rescue LoadError
+end
+
+begin
+  require 'minitest/autorun'
+rescue LoadError => e
+  raise e unless ENV['RAILS_ENV'] == "production"
+end
 # Requires supporting ruby files with custom matchers and macros, etc, in
 # spec/support/ and its subdirectories. Files matching `spec/**/*_spec.rb` are
 # run as spec files by default. This means that files in spec/support that end
@@ -67,5 +82,11 @@ RSpec.configure do |config|
 
   config.include Capybara::DSL
   config.include FactoryBot::Syntax::Methods
+  Shoulda::Matchers.configure do |config|
+    config.integrate do |with|
+      with.test_framework :rspec
+      with.library :rails
+    end
+  end
 
 end

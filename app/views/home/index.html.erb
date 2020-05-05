@@ -1,7 +1,47 @@
 <h1>Covid 2020</h1>
 <% if current_user %>
 
-<%= link_to 'Upload a new video', new_video_path%>
+
+  <h3>Featured Videos</h3>
+
+  <h3>Most Watched this Week</h3>
+
+  <h3>Trending</h3>
+
+  <h3>Vidoes you may like</h3>
+
+  <h3>Most donated to</h3>
+
+  <h3>People who follow you</h3>
+  Amount of followers: <%= current_user.followers.count %>
+
+    <% current_user.followers.each do |follower|%>
+      <%= follower.email %>
+    <% end%>
+  <h3>People you follow</h3>
+  Amount of people you follow: <%= current_user.following.count %>
+    <% current_user.following.each do |follower|%>
+      <%= follower.email %>
+    <% end%>
+
+    <h3>Newest Uploads by people you follow</h3>
+    <% current_user.following.each do |follower|%>
+      
+      <video
+      id="my-video"
+      class="video-js"
+      controls
+      preload="auto"
+      width="640"
+      height="264"
+      poster="<%= url_for(follower.videos.last.thumbnail) %>"
+      data-setup="{}"
+    >
+      <source src="<%= url_for(follower.videos.last.clip) %>" type="video/mp4" />
+      
+    </video>
+      
+    <% end%>
 
 <% end %>
 

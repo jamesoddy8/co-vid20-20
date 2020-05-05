@@ -78,7 +78,7 @@ class VideosController < ApplicationController
       format.json { head :no_content }
     end
     @profiles_id = @video.profiles_id
-    redirect_to profiles_path(id: @profiles_id)
+    # redirect_to profiles_path(id: @profiles_id)
   end
 
   def search
