@@ -11,9 +11,5 @@ class ProfilesController < ApplicationController
   def index
     @user = User.all
   end
-  # private
-  #
-  # def video_params
-  #   params.require(:video).permit(:title, :description, :clip, :thumbnail, :search, :all_tags, :profiles_id)
-  # end
+  
 end
