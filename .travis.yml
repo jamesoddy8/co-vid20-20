@@ -20,7 +20,7 @@ deploy:
   provider: heroku
   strategy: api
   api_key:
-    secure: "79b7caaf-7f59-43ac-9254-1b758ca82fdc"
+    secure: "74F79B8C79F1FB566AAFA8A2FD8CC54B571A485668AA85669D3E3804DBE675E1,31701BBEFE9828A7C4B49F43FE18BED729791AF98E729C3099558491A1C72061"
   app: community-video-2020
   on:
     repo: jamesoddy8/co-vid20-20
