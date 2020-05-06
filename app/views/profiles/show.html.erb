@@ -1,7 +1,7 @@
   <% if @profile_picture.last != nil %>
     <div class="username-title-container">
       <div class="round-profile-picture">
-        <%= image_tag(@profile_picture.last.image, style:'width:100%') %>
+        <%= image_tag(@profile_picture.last.image, style:'height:100%') %>
       </div>
       <h1><%= @current_profile.username %>'s profile</h1>
         <% if current_user.id == params[:id].to_i %>
@@ -52,7 +52,7 @@
         <%= link_to image_tag(video.thumbnail, style:'width:100%'), video_path %>
       </div>
       <div class="video-card-text-content">
-        <a href="/videos/<%=video.id%>"></a><h3><%= video.title %></h3></a>
+        <a href="/videos/<%=video.id%>"><h3><%= video.title %></h3></a>
           
           <% if current_user === video.user %>
             <%= link_to 'Edit', edit_video_path(video) %>

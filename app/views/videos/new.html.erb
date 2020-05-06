@@ -1,6 +1,9 @@
-<div class="align-vertical">
-  <aside>
-    <h1>Upload Video</h1>
-  </aside>
-  <%= render 'form', video: @video %> <%= link_to 'Back', videos_path %>
+
+<div class="upload-video-field">
+  <h1>Upload a New Video</h1>
 </div>
+
+<%= render 'form', video: @video %>
+
+<%= link_to 'Back', videos_path %>
+

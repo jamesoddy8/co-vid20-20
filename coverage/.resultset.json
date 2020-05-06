@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/student/Desktop/Projects/co-vid20-20/spec/features/donating_spec.rb": {
+      "/Users/student/Projects/co-vid20-20/spec/features/donating_spec.rb": {
         "lines": [
           1,
           1,
@@ -17,235 +17,218 @@
           1,
           1,
           1,
-      "/Users/orion/Repositories/Makers/week11/co-vid20-20/spec/helpers/profiles_helper_spec.rb": {
-        "lines": [
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          0,
-          0,
-          null
-        ]
-      },
-      "/Users/orion/Repositories/Makers/week11/co-vid20-20/spec/rails_helper.rb": {
-        "lines": [
-          null,
-          1,
-          1,
-          1,
-          null,
-          0,
-          0,
-          0,
-          0,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          0,
-          null,
-          0,
-          0,
-          null,
-          0,
-          null,
-          0,
-          null,
-          null,
-          null,
-          null,
-          0,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          0,
-          null,
-          null,
-          0,
-          null,
-          null,
-          0,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          0,
-          0,
           null,
           null
         ]
       },
-      "/Users/orion/Repositories/Makers/week11/co-vid20-20/config/environment.rb": {
+      "/Users/student/Projects/co-vid20-20/spec/rails_helper.rb": {
         "lines": [
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          0,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          0,
+          0,
+          null,
+          1,
           null,
           1,
           null,
           null,
-          0
-        ]
-      },
-      "/Users/orion/Repositories/Makers/week11/co-vid20-20/config/application.rb": {
-        "lines": [
+          null,
+          null,
           1,
           null,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          null,
-          null,
-          null,
-          0,
-          null,
-          0,
-          0,
-          null,
-          0,
           null,
           null,
           null,
           null,
           null,
           null,
-          0,
           null,
           null,
-          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
           null,
           null
         ]
       },
-      "/Users/orion/Repositories/Makers/week11/co-vid20-20/config/boot.rb": {
+      "/Users/student/Projects/co-vid20-20/config/environment.rb": {
         "lines": [
-          1,
           null,
           1,
-          0
+          null,
+          null,
+          1
         ]
       },
-      "/Users/orion/Repositories/Makers/week11/co-vid20-20/spec/models/user_spec.rb": {
+      "/Users/student/Projects/co-vid20-20/config/application.rb": {
         "lines": [
           1,
           null,
-          0,
+          1,
           null,
-          0,
-          0,
-          null,
-          null,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          null,
-          null,
-          0,
-          0,
-          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
           null,
           null,
-          0,
-          0,
-          0,
-          0,
-          0,
           null,
           null,
-          0,
-          0,
-          0,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
           null,
           null,
-          0,
-          0,
-          0,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
           null,
           null
         ]
       },
-      "/Users/orion/Repositories/Makers/week11/co-vid20-20/spec/models/video_spec.rb": {
+      "/Users/student/Projects/co-vid20-20/config/boot.rb": {
         "lines": [
           1,
           null,
-          0,
-          null,
-          0,
-          0,
-          0,
-          null,
-          null,
-          0,
-          0,
-          0,
+          1,
+          1
+        ]
+      },
+      "/Users/student/Projects/co-vid20-20/config/environments/test.rb": {
+        "lines": [
           null,
           null,
-          0,
-          0,
-          0,
           null,
           null,
-          0,
-          0,
-          0,
+          null,
+          1,
           null,
           null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/student/Projects/co-vid20-20/config/initializers/application_controller_renderer.rb": {
+        "lines": [
           null,
           null,
           null,
@@ -256,28 +239,8 @@
           null
         ]
       },
-      "/Users/orion/Repositories/Makers/week11/co-vid20-20/spec/requests/profiles_request_spec.rb": {
+      "/Users/student/Projects/co-vid20-20/config/initializers/assets.rb": {
         "lines": [
-          1,
-          null,
-          0,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
           null,
           null,
           null,
@@ -291,211 +254,22 @@
           null,
           null,
           null,
+          null
+        ]
+      },
+      "/Users/student/Projects/co-vid20-20/config/initializers/backtrace_silencers.rb": {
+        "lines": [
           null,
           null,
           null,
           null,
           null,
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
+          null
+        ]
+      },
+      "/Users/student/Projects/co-vid20-20/config/initializers/content_security_policy.rb": {
+        "lines": [
           null,
           null,
           null,
@@ -528,7 +302,319 @@
           null
         ]
       },
-      "/Users/student/Desktop/Projects/co-vid20-20/config/initializers/filter_parameter_logging.rb": {
+      "/Users/student/Projects/co-vid20-20/config/initializers/cookies_serializer.rb": {
+        "lines": [
+          null,
+          null,
+          null,
+          null,
+          1
+        ]
+      },
+      "/Users/student/Projects/co-vid20-20/config/initializers/devise.rb": {
+        "lines": [
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/student/Projects/co-vid20-20/config/initializers/filter_parameter_logging.rb": {
         "lines": [
           null,
           null,
@@ -536,7 +622,7 @@
           1
         ]
       },
-      "/Users/student/Desktop/Projects/co-vid20-20/config/initializers/inflections.rb": {
+      "/Users/student/Projects/co-vid20-20/config/initializers/inflections.rb": {
         "lines": [
           null,
           null,
@@ -556,7 +642,7 @@
           null
         ]
       },
-      "/Users/student/Desktop/Projects/co-vid20-20/config/initializers/mime_types.rb": {
+      "/Users/student/Projects/co-vid20-20/config/initializers/mime_types.rb": {
         "lines": [
           null,
           null,
@@ -564,7 +650,7 @@
           null
         ]
       },
-      "/Users/student/Desktop/Projects/co-vid20-20/config/initializers/wrap_parameters.rb": {
+      "/Users/student/Projects/co-vid20-20/config/initializers/wrap_parameters.rb": {
         "lines": [
           null,
           null,
@@ -582,7 +668,7 @@
           null
         ]
       },
-      "/Users/student/Desktop/Projects/co-vid20-20/spec/factories.rb": {
+      "/Users/student/Projects/co-vid20-20/spec/factories.rb": {
         "lines": [
           1,
           1,
@@ -613,44 +699,6 @@
           null,
           null,
           1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/student/Desktop/Projects/co-vid20-20/config/routes.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          1,
-          1,
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
           1,
           1,
           1,
@@ -659,7 +707,45 @@
           null
         ]
       },
-      "/Users/student/Desktop/Projects/co-vid20-20/app/models/user.rb": {
+      "/Users/student/Projects/co-vid20-20/config/routes.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/student/Projects/co-vid20-20/app/models/user.rb": {
         "lines": [
           1,
           null,
@@ -688,86 +774,86 @@
           null
         ]
       },
-      "/Users/student/Desktop/Projects/co-vid20-20/app/models/application_record.rb": {
+      "/Users/student/Projects/co-vid20-20/app/models/application_record.rb": {
         "lines": [
           1,
           1,
           null
         ]
       },
-      "/Users/student/Desktop/Projects/co-vid20-20/app/helpers/application_helper.rb": {
+      "/Users/student/Projects/co-vid20-20/app/helpers/application_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/student/Desktop/Projects/co-vid20-20/app/helpers/comments_helper.rb": {
+      "/Users/student/Projects/co-vid20-20/app/helpers/comments_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/student/Desktop/Projects/co-vid20-20/app/helpers/conversations_helper.rb": {
+      "/Users/student/Projects/co-vid20-20/app/helpers/conversations_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/student/Desktop/Projects/co-vid20-20/app/helpers/home_helper.rb": {
+      "/Users/student/Projects/co-vid20-20/app/helpers/home_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/student/Desktop/Projects/co-vid20-20/app/helpers/likes_helper.rb": {
+      "/Users/student/Projects/co-vid20-20/app/helpers/likes_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/student/Desktop/Projects/co-vid20-20/app/helpers/messages_helper.rb": {
+      "/Users/student/Projects/co-vid20-20/app/helpers/messages_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/student/Desktop/Projects/co-vid20-20/app/helpers/profile_pictures_helper.rb": {
+      "/Users/student/Projects/co-vid20-20/app/helpers/profile_pictures_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/student/Desktop/Projects/co-vid20-20/app/helpers/profiles_helper.rb": {
+      "/Users/student/Projects/co-vid20-20/app/helpers/profiles_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/student/Desktop/Projects/co-vid20-20/app/helpers/relationships_helper.rb": {
+      "/Users/student/Projects/co-vid20-20/app/helpers/relationships_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/student/Desktop/Projects/co-vid20-20/app/helpers/search_helper.rb": {
+      "/Users/student/Projects/co-vid20-20/app/helpers/search_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/student/Desktop/Projects/co-vid20-20/app/helpers/videos_helper.rb": {
+      "/Users/student/Projects/co-vid20-20/app/helpers/videos_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/student/Desktop/Projects/co-vid20-20/app/helpers/welcome_helper.rb": {
+      "/Users/student/Projects/co-vid20-20/app/helpers/welcome_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/student/Desktop/Projects/co-vid20-20/spec/sign_up_helper.rb": {
+      "/Users/student/Projects/co-vid20-20/spec/sign_up_helper.rb": {
         "lines": [
           1,
           10,
@@ -790,7 +876,7 @@
           null
         ]
       },
-      "/Users/student/Desktop/Projects/co-vid20-20/spec/create_video_helper.rb": {
+      "/Users/student/Projects/co-vid20-20/spec/create_video_helper.rb": {
         "lines": [
           1,
           10,
@@ -803,7 +889,7 @@
           null
         ]
       },
-      "/Users/student/Desktop/Projects/co-vid20-20/spec/features/follow_feature_spec.rb": {
+      "/Users/student/Projects/co-vid20-20/spec/features/follow_feature_spec.rb": {
         "lines": [
           1,
           1,
@@ -843,7 +929,7 @@
           null
         ]
       },
-      "/Users/student/Desktop/Projects/co-vid20-20/spec/features/like_videos_spec.rb": {
+      "/Users/student/Projects/co-vid20-20/spec/features/like_videos_spec.rb": {
         "lines": [
           1,
           1,
@@ -870,7 +956,7 @@
           null
         ]
       },
-      "/Users/student/Desktop/Projects/co-vid20-20/spec/features/video_feature_spec.rb": {
+      "/Users/student/Projects/co-vid20-20/spec/features/video_feature_spec.rb": {
         "lines": [
           1,
           1,
@@ -917,7 +1003,6 @@
           1,
           1,
           1,
-          1,
           null,
           null,
           1,
@@ -932,7 +1017,7 @@
           null
         ]
       },
-      "/Users/student/Desktop/Projects/co-vid20-20/spec/helpers/conversations_helper_spec.rb": {
+      "/Users/student/Projects/co-vid20-20/spec/helpers/conversations_helper_spec.rb": {
         "lines": [
           null,
           null,
@@ -951,7 +1036,7 @@
           null
         ]
       },
-      "/Users/student/Desktop/Projects/co-vid20-20/spec/helpers/messages_helper_spec.rb": {
+      "/Users/student/Projects/co-vid20-20/spec/helpers/messages_helper_spec.rb": {
         "lines": [
           null,
           null,
@@ -970,7 +1055,7 @@
           null
         ]
       },
-      "/Users/student/Desktop/Projects/co-vid20-20/spec/helpers/profile_pictures_helper_spec.rb": {
+      "/Users/student/Projects/co-vid20-20/spec/helpers/profile_pictures_helper_spec.rb": {
         "lines": [
           null,
           null,
@@ -989,7 +1074,7 @@
           null
         ]
       },
-      "/Users/student/Desktop/Projects/co-vid20-20/spec/helpers/profiles_helper_spec.rb": {
+      "/Users/student/Projects/co-vid20-20/spec/helpers/profiles_helper_spec.rb": {
         "lines": [
           null,
           null,
@@ -1008,7 +1093,7 @@
           null
         ]
       },
-      "/Users/student/Desktop/Projects/co-vid20-20/spec/helpers/relationships_helper_spec.rb": {
+      "/Users/student/Projects/co-vid20-20/spec/helpers/relationships_helper_spec.rb": {
         "lines": [
           null,
           null,
@@ -1027,7 +1112,7 @@
           null
         ]
       },
-      "/Users/student/Desktop/Projects/co-vid20-20/spec/models/comment_spec.rb": {
+      "/Users/student/Projects/co-vid20-20/spec/models/comment_spec.rb": {
         "lines": [
           1,
           null,
@@ -1044,7 +1129,7 @@
           null
         ]
       },
-      "/Users/student/Desktop/Projects/co-vid20-20/app/models/comment.rb": {
+      "/Users/student/Projects/co-vid20-20/app/models/comment.rb": {
         "lines": [
           1,
           1,
@@ -1055,7 +1140,7 @@
           null
         ]
       },
-      "/Users/student/Desktop/Projects/co-vid20-20/spec/models/conversation_spec.rb": {
+      "/Users/student/Projects/co-vid20-20/spec/models/conversation_spec.rb": {
         "lines": [
           1,
           null,
@@ -1064,7 +1149,7 @@
           null
         ]
       },
-      "/Users/student/Desktop/Projects/co-vid20-20/app/models/conversation.rb": {
+      "/Users/student/Projects/co-vid20-20/app/models/conversation.rb": {
         "lines": [
           1,
           null,
@@ -1088,7 +1173,7 @@
           null
         ]
       },
-      "/Users/student/Desktop/Projects/co-vid20-20/spec/models/message_spec.rb": {
+      "/Users/student/Projects/co-vid20-20/spec/models/message_spec.rb": {
         "lines": [
           1,
           null,
@@ -1108,7 +1193,7 @@
           null
         ]
       },
-      "/Users/student/Desktop/Projects/co-vid20-20/app/models/message.rb": {
+      "/Users/student/Projects/co-vid20-20/app/models/message.rb": {
         "lines": [
           1,
           null,
@@ -1123,7 +1208,7 @@
           null
         ]
       },
-      "/Users/student/Desktop/Projects/co-vid20-20/spec/models/profile_picture_spec.rb": {
+      "/Users/student/Projects/co-vid20-20/spec/models/profile_picture_spec.rb": {
         "lines": [
           1,
           null,
@@ -1136,7 +1221,7 @@
           null
         ]
       },
-      "/Users/student/Desktop/Projects/co-vid20-20/app/models/profile_picture.rb": {
+      "/Users/student/Projects/co-vid20-20/app/models/profile_picture.rb": {
         "lines": [
           1,
           1,
@@ -1144,7 +1229,7 @@
           null
         ]
       },
-      "/Users/student/Desktop/Projects/co-vid20-20/spec/models/relationship_spec.rb": {
+      "/Users/student/Projects/co-vid20-20/spec/models/relationship_spec.rb": {
         "lines": [
           1,
           1,
@@ -1163,7 +1248,7 @@
           null
         ]
       },
-      "/Users/student/Desktop/Projects/co-vid20-20/app/models/relationship.rb": {
+      "/Users/student/Projects/co-vid20-20/app/models/relationship.rb": {
         "lines": [
           1,
           1,
@@ -1173,7 +1258,7 @@
           null
         ]
       },
-      "/Users/student/Desktop/Projects/co-vid20-20/spec/models/user_spec.rb": {
+      "/Users/student/Projects/co-vid20-20/spec/models/user_spec.rb": {
         "lines": [
           1,
           null,
@@ -1229,7 +1314,7 @@
           null
         ]
       },
-      "/Users/student/Desktop/Projects/co-vid20-20/spec/models/video_spec.rb": {
+      "/Users/student/Projects/co-vid20-20/spec/models/video_spec.rb": {
         "lines": [
           1,
           null,
@@ -1259,7 +1344,7 @@
           null
         ]
       },
-      "/Users/student/Desktop/Projects/co-vid20-20/app/models/video.rb": {
+      "/Users/student/Projects/co-vid20-20/app/models/video.rb": {
         "lines": [
           1,
           1,
@@ -1283,7 +1368,7 @@
           null,
           null,
           1,
-          47,
+          31,
           null,
           null,
           null,
@@ -1292,7 +1377,7 @@
           null
         ]
       },
-      "/Users/student/Desktop/Projects/co-vid20-20/spec/requests/conversations_request_spec.rb": {
+      "/Users/student/Projects/co-vid20-20/spec/requests/conversations_request_spec.rb": {
         "lines": [
           1,
           null,
@@ -1301,7 +1386,7 @@
           null
         ]
       },
-      "/Users/student/Desktop/Projects/co-vid20-20/spec/requests/messages_request_spec.rb": {
+      "/Users/student/Projects/co-vid20-20/spec/requests/messages_request_spec.rb": {
         "lines": [
           1,
           null,
@@ -1310,7 +1395,7 @@
           null
         ]
       },
-      "/Users/student/Desktop/Projects/co-vid20-20/spec/requests/profile_pictures_spec.rb": {
+      "/Users/student/Projects/co-vid20-20/spec/requests/profile_pictures_spec.rb": {
         "lines": [
           null,
           null,
@@ -1443,7 +1528,7 @@
           null
         ]
       },
-      "/Users/student/Desktop/Projects/co-vid20-20/spec/requests/profiles_request_spec.rb": {
+      "/Users/student/Projects/co-vid20-20/spec/requests/profiles_request_spec.rb": {
         "lines": [
           1,
           null,
@@ -1452,7 +1537,7 @@
           null
         ]
       },
-      "/Users/student/Desktop/Projects/co-vid20-20/spec/requests/relationships_request_spec.rb": {
+      "/Users/student/Projects/co-vid20-20/spec/requests/relationships_request_spec.rb": {
         "lines": [
           1,
           null,
@@ -1473,7 +1558,7 @@
           null
         ]
       },
-      "/Users/student/Desktop/Projects/co-vid20-20/spec/routing/profile_pictures_routing_spec.rb": {
+      "/Users/student/Projects/co-vid20-20/spec/routing/profile_pictures_routing_spec.rb": {
         "lines": [
           1,
           null,
@@ -1515,7 +1600,7 @@
           null
         ]
       },
-      "/Users/student/Desktop/Projects/co-vid20-20/app/controllers/profile_pictures_controller.rb": {
+      "/Users/student/Projects/co-vid20-20/app/controllers/profile_pictures_controller.rb": {
         "lines": [
           1,
           1,
@@ -1594,7 +1679,7 @@
           null
         ]
       },
-      "/Users/student/Desktop/Projects/co-vid20-20/app/controllers/application_controller.rb": {
+      "/Users/student/Projects/co-vid20-20/app/controllers/application_controller.rb": {
         "lines": [
           1,
           1,
@@ -1607,7 +1692,7 @@
           null
         ]
       },
-      "/Users/student/Desktop/Projects/co-vid20-20/spec/views/profile_pictures/edit.html.erb_spec.rb": {
+      "/Users/student/Projects/co-vid20-20/spec/views/profile_pictures/edit.html.erb_spec.rb": {
         "lines": [
           1,
           null,
@@ -1633,7 +1718,7 @@
           null
         ]
       },
-      "/Users/student/Desktop/Projects/co-vid20-20/spec/views/profile_pictures/index.html.erb_spec.rb": {
+      "/Users/student/Projects/co-vid20-20/spec/views/profile_pictures/index.html.erb_spec.rb": {
         "lines": [
           null,
           null,
@@ -1659,7 +1744,7 @@
           null
         ]
       },
-      "/Users/student/Desktop/Projects/co-vid20-20/spec/views/profile_pictures/new.html.erb_spec.rb": {
+      "/Users/student/Projects/co-vid20-20/spec/views/profile_pictures/new.html.erb_spec.rb": {
         "lines": [
           null,
           null,
@@ -1684,7 +1769,7 @@
           null
         ]
       },
-      "/Users/student/Desktop/Projects/co-vid20-20/spec/views/profile_pictures/show.html.erb_spec.rb": {
+      "/Users/student/Projects/co-vid20-20/spec/views/profile_pictures/show.html.erb_spec.rb": {
         "lines": [
           null,
           null,
@@ -1704,7 +1789,7 @@
           null
         ]
       },
-      "/Users/student/Desktop/Projects/co-vid20-20/app/controllers/home_controller.rb": {
+      "/Users/student/Projects/co-vid20-20/app/controllers/home_controller.rb": {
         "lines": [
           1,
           1,
@@ -1713,7 +1798,7 @@
           null
         ]
       },
-      "/Users/student/Desktop/Projects/co-vid20-20/app/controllers/videos_controller.rb": {
+      "/Users/student/Projects/co-vid20-20/app/controllers/videos_controller.rb": {
         "lines": [
           null,
           null,
@@ -1724,7 +1809,7 @@
           null,
           null,
           1,
-          18,
+          16,
           null,
           null,
           null,
@@ -1799,15 +1884,15 @@
           null,
           null,
           1,
-          1,
+          0,
           0,
           null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
           null,
           null,
           null,
@@ -1828,7 +1913,7 @@
           null
         ]
       },
-      "/Users/student/Desktop/Projects/co-vid20-20/app/models/tagging.rb": {
+      "/Users/student/Projects/co-vid20-20/app/models/tagging.rb": {
         "lines": [
           1,
           1,
@@ -1836,7 +1921,7 @@
           null
         ]
       },
-      "/Users/student/Desktop/Projects/co-vid20-20/app/models/tag.rb": {
+      "/Users/student/Projects/co-vid20-20/app/models/tag.rb": {
         "lines": [
           1,
           null,
@@ -1846,7 +1931,7 @@
           null
         ]
       },
-      "/Users/student/Desktop/Projects/co-vid20-20/app/controllers/relationships_controller.rb": {
+      "/Users/student/Projects/co-vid20-20/app/controllers/relationships_controller.rb": {
         "lines": [
           1,
           1,
@@ -1863,7 +1948,26 @@
           null
         ]
       },
-      "/Users/student/Desktop/Projects/co-vid20-20/app/models/like.rb": {
+      "/Users/student/Projects/co-vid20-20/app/controllers/profiles_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/student/Projects/co-vid20-20/app/models/like.rb": {
         "lines": [
           1,
           1,
@@ -1871,7 +1975,7 @@
           null
         ]
       },
-      "/Users/student/Desktop/Projects/co-vid20-20/app/controllers/comments_controller.rb": {
+      "/Users/student/Projects/co-vid20-20/app/controllers/comments_controller.rb": {
         "lines": [
           1,
           1,
@@ -1898,6 +2002,6 @@
         ]
       }
     },
-    "timestamp": 1588686202
+    "timestamp": 1588798003
   }
 }

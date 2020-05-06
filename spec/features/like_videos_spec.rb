@@ -8,7 +8,7 @@ RSpec.feature "like videos", type: :feature do
     visit "/videos"
     create_video
     click_link "Back"
-    click_link "Show"
+    page.first(".video-size-for-card a").click
     expect(page).to have_content("Likes:")
   end
 

@@ -10,18 +10,31 @@
       </ul>
     </div>
   <% end %>
-  <div>
-    <%= form.text_field :title, placeholder: 'Title' %>
+
+  <div class="upload-video-field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
   </div>
-  <div>
-    <%= form.text_area :description, placeholder: 'Description' %>
+
+  <div class="upload-video-field">
+    <%= form.label :description %>
+    <%= form.text_area :description, :size => 200 %>
   </div>
-  <div>
-    <%= form.text_field :all_tags, placeholder: "tags separated with commas" %>
+
+  <div class="upload-video-field">
+    <%= form.label :clip %>
+    <%= form.file_field :clip %>
   </div>
-    <div class="align-horizontal">  
-      <%= form.file_field :clip, name: 'Title' %>
-      <%= form.file_field :thumbnail, placeholder: 'Title' %>
-    </div>
+
+  <div class="upload-video-field">
+    <%= form.label :thumbnail %>
+    <%= form.file_field :thumbnail %>
+  </div>
+
+  <div class="upload-video-field">
+    <%= form.text_field :all_tags, placeholder: "tags separated with commas", :size => 100 %>
+  </div>
+
+  <div class="upload-video-field", style="text-align:center">
     <%= form.submit %>
 <% end %>
