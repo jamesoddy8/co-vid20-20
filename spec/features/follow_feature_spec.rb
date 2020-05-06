@@ -10,10 +10,10 @@ RSpec.describe "Following a user", type: :feature do
         click_link "Sign Out"
         create_user_and_sign_up_2
         visit "/videos"
-        click_link "Show"
+        page.first(".video-size-for-card a").click
         click_button 'Follow'
         visit "/videos"
-        click_link "Show"
+        page.first(".video-size-for-card a").click
         expect(page).to have_selector(:link_or_button, 'Unfollow')
     end
 
@@ -24,13 +24,13 @@ RSpec.describe "Following a user", type: :feature do
         click_link "Sign Out"
         create_user_and_sign_up_2
         visit "/videos"
-        click_link "Show"
+        page.first(".video-size-for-card a").click
         click_button 'Follow'
         visit "/videos"
-        click_link "Show"
+        page.first(".video-size-for-card a").click
         click_button 'Unfollow'
         visit "/videos"
-        click_link "Show"
+        page.first(".video-size-for-card a").click
         expect(page).to have_selector(:link_or_button, 'Follow')
     end
 end
