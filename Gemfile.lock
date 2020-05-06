@@ -299,8 +299,8 @@ DEPENDENCIES
   simplecov-console
   spring
   spring-watcher-listen (~> 2.0.0)
-  test-unit
   sprockets-rails
+  test-unit
   tzinfo-data
   web-console (>= 3.3.0)
   webpacker (~> 4.0)
