@@ -52,7 +52,7 @@
         <%= link_to image_tag(video.thumbnail, style:'width:100%'), video_path %>
       </div>
       <div class="video-card-text-content">
-        <a href="/videos/<%=video.id%>"></a><h3><%= video.title %></h3></a>
+        <a href="/videos/<%=video.id%>"><h3><%= video.title %></h3></a>
           
           <% if current_user === video.user %>
             <%= link_to 'Edit', edit_video_path(video) %>
