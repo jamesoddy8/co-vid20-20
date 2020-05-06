@@ -1,25 +1,80 @@
-<h1><%= @current_profile.username %>'s profile</h1>
-<% if @profile_picture != nil %>
-  <div style="width:400px; height:auto">
-    <%= image_tag(@profile_picture.last.image, style:'width:100%') %>
-  </div>
-<% end %>
-<% if current_user.id == params[:id].to_i %>
-  <%= link_to 'Upload a profile picture', new_profile_picture_path %>
-<% end %>
-<h3>This users videos</h3>
-  <% @videos.each do |video| %>
-  <p>Title: <%= link_to video.title, video %></p>
-  <p>Description: <%= video.description %></p>
-  <p>Tags: <%= raw video.all_tags %></p>
-  <p>By: <%= link_to video.user.username, '/profiles/' + video.user.id.to_s %> </p>
-  <%= link_to 'Show', video %></td>
-  <% if current_user === video.user %>
-    <%= link_to 'Edit', edit_video_path(video) %>
-    <%= link_to 'Destroy', video, method: :delete, data: { confirm: ' sure?' } %>
-  <% end %>
-<% end %>
+  <% if @profile_picture.last != nil %>
+    <div class="username-title-container">
+      <div class="round-profile-picture">
+        <%= image_tag(@profile_picture.last.image, style:'width:100%') %>
+      </div>
+      <h1><%= @current_profile.username %>'s profile</h1>
+        <% if current_user.id == params[:id].to_i %>
+          <div class="link-button">
+            <%= link_to 'Edit', edit_profile_picture_path(@profile_picture) %>
+          </div>
+          <div class="link-button">
+            <%= link_to 'Delete', @profile_picture.last, method: :delete, data: { confirm: 'Are you sure?' } %>
+          </div>
+          <div class="link-button">
+            <%= link_to 'Upload a new profile picture', new_profile_picture_path %>
+          </div>
+        <% end %>
+    </div>
+  <% else %>
+    <h1><%= @current_profile.username %>'s profile</h1>
+    <% if current_user.id == params[:id].to_i %>
+      <div class="link-button">
+        <%= link_to 'Upload a profile picture', new_profile_picture_path %>
+      </div>
+    <% end %>
+    <% end %>
+    <div class="align-horizontal">
+      <div>
+        <% if current_user.id != @current_profile.id %>
+        <h3>Follow this User</h3> 
+          <% if !current_user.following?(@current_profile) %>
+            <%= form_for(current_user.active_relationships.build) do |f| %>
+              <%= hidden_field_tag :followed_id, @current_profile.id %>
+              <%= f.submit "Follow" %>
+            <% end %>
+          <% else %>
+            <%= form_for(current_user.active_relationships.find_by(followed_id: @current_profile.id), html: {method: :delete }) do |f| %>
+              <%= f.submit "Unfollow" %>
+            <% end %>
+          <% end %>
+        <% end %>      
+      </div>
+    </div>
+    <div class="align-horizontal">
+      <h3>This users videos</h3>
+    </div>
+    <div class="align-horizontal">
+    <% @videos.each do |video| %>
+    
+    <div class="video-card">
+      <div class="video-size-for-card">
+        <%= link_to image_tag(video.thumbnail, style:'width:100%'), video_path %>
+      </div>
+      <div class="video-card-text-content">
+        <a href="/videos/<%=video.id%>"></a><h3><%= video.title %></h3></a>
+          
+          <% if current_user === video.user %>
+            <%= link_to 'Edit', edit_video_path(video) %>
+            <%= link_to 'Delete this video', video, method: :delete, data: { confirm: ' sure?' } %>
+          <% end %>
+          Views: 0
+          <div style="text-align: right;">
+            <% if video.tags.length != 0 %>
+              Tags: 
+              <% video.tags.each do |tag| %>
+                <%= tag.name %>
+              <% end %>
+            <% else %>
+              Tags: 0
+            <% end %>
+          </div>
+      </div>
+      </div>
+    <% end %>
 
-<br>
-
-<%= link_to 'New Video', new_video_path %>
+  <br>
+</div>
+<div class="align-horizontal">
+  <%= link_to 'New Video', new_video_path %>
+</div>

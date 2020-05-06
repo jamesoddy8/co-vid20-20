@@ -4,17 +4,17 @@
   <!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
   <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<p>
-  Title: <%= @video.title %>
-</p>
+<h2>
+  <%= @video.title %>
+</h2>
 
 <p>
-  Description: <%= @video.description %>
+  <%= @video.description %>
 </p>
 
-<p>
+<caption>
   Tags: <%= raw @video.all_tags %>
-</p>
+</caption>
 
 <video
     id="my-video"

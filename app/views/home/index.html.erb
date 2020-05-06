@@ -26,20 +26,21 @@
 
     <h3>Newest Uploads by people you follow</h3>
     <% current_user.following.each do |follower|%>
-      
-      <video
-      id="my-video"
-      class="video-js"
-      controls
-      preload="auto"
-      width="640"
-      height="264"
-      poster="<%= url_for(follower.videos.last.thumbnail) %>"
-      data-setup="{}"
-    >
-      <source src="<%= url_for(follower.videos.last.clip) %>" type="video/mp4" />
-      
-    </video>
+      <div class="video-card">
+        <video
+        id="my-video"
+        class="video-js"
+        controls
+        preload="auto"
+        width="640"
+        height="264"
+        poster="<%= url_for(follower.videos.last.thumbnail) %>"
+        data-setup="{}"
+        >
+        <source src="<%= url_for(follower.videos.last.clip) %>" type="video/mp4" />
+        
+        </video>
+      </div>
       
     <% end%>
 

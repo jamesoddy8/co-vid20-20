@@ -1,36 +1,36 @@
 @import "themes";
 @font-face {
   font-family: "Brandon Grotesque";
-  src: url("fonts/Brandon_reg.otf");
+  src: url("Brandon_reg.otf");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "Brandon Grotesque";
-  src: url("fonts/Brandon_reg_it.otf");
+  src: url("Brandon_reg_it.otf");
   font-weight: 400;
   font-style: italic;
 }
 @font-face {
   font-family: "Brandon Grotesque";
-  src: url("fonts/Brandon_med.otf");
+  src: url("Brandon_med.otf");
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
   font-family: "Brandon Grotesque";
-  src: url("fonts/Brandon_bld.otf");
+  src: url("Brandon_bld.otf");
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
   font-family: "Brandon Grotesque";
-  src: url("fonts/Brandon_blk.otf");
+  src: url("Brandon_blk.otf");
   font-weight: 900;
   font-style: normal;
 }
 
-h1 {
+@mixin h1 {
   margin: 0px;
   font-weight: 500;
   font-size: 32px;
@@ -38,7 +38,8 @@ h1 {
     color: themed(contrast-0);
   }
 }
-h2 {
+
+@mixin h2 {
   margin: 0px;
   font-family: "Brandon Grotesque";
   font-size: 24px;
@@ -46,22 +47,98 @@ h2 {
     color: themed(contrast-0);
   }
 }
-p {
-  margin-top: 4px;
-  margin-bottom: 20px;
-  font-weight: 400;
-  font-size: 20px;
+
+@mixin h3 {
+  margin: 0px;
+  font-family: "Brandon Grotesque";
+  font-size: 24px;
   @include themify($themes) {
-    color: themed(contrast-0);
+    color: themed(contrast-2);
   }
 }
 
-a {
+@mixin caption {
+  margin-top: 4px;
+  margin-bottom: 20px;
+  font-weight: 400;
+  font-size: 16px;
+  @include themify($themes) {
+    color: themed(contrast-3);
+  }
+}
+
+@mixin p {
+  margin-top: 4px;
+  margin-bottom: 20px;
+  font-weight: 400;
+  font-size: 16px;
+  @include themify($themes) {
+    color: themed(contrast-1);
+  }
+}
+
+@mixin a {
+  text-decoration-line: none;
   margin-top: 4px;
   margin-bottom: 20px;
   font-weight: 400;
   font-size: 16px;
   @include themify($themes) {
     color: themed(hyperlink);
+  }
+}
+
+h1 {
+  @include h1;
+}
+h2 {
+  @include h2;
+}
+h3 {
+  @include h3;
+}
+caption {
+  @include caption;
+}
+p {
+  @include p;
+}
+
+a {
+  @include a;
+}
+
+.link-h1 {
+  a {
+    @include h1;
+  }
+}
+
+.link-h2 {
+  a {
+    @include h2;
+  }
+}
+.link-h3 {
+  a {
+    @include h3;
+  }
+}
+
+.link-button {
+  border-radius: 5px;
+  padding: 2px 5px 0px 4px;
+  display: inline-block;
+  @include themify($themes) {
+    border: 1px solid themed(base-2);
+    background-color: themed(base-1);
+  }
+  a {
+    text-decoration-line: none;
+    font-weight: 400;
+    font-size: 16px;
+    @include themify($themes) {
+      color: themed(contrast-0);
+    }
   }
 }
