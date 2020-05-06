@@ -42,6 +42,7 @@ class VideosController < ApplicationController
   # POST /videos
   # POST /videos.json
   def create
+    byebug
     @video = Video.new(video_params)
     @video.user = current_user
     respond_to do |format|
