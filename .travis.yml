@@ -20,7 +20,7 @@ deploy:
   provider: heroku
   strategy: api
   api_key:
-    secure: gBbQ+nF2kt2VJjJhLbycg1/8sUH0ixDVlOwsVbvm7wfzi/XNvuut20wzeBth0i
+    secure: "gBbQ+nF2kt2VJjJhLbycg1/8sUH0ixDVlOwsVbvm7wfzi/XNvuut20wzeBth0i
 ib5nXgEtNJuwJOWnESGdbdSw4ip5g9oxSjfp3vHiWMj0NUyaKjN3f1T/T4DDpqKu/NWP9UO6ZV
 8JIZ4Ute29u6nOcx6voAMbNIxwOAAuccCGwxWBdDZoTm8xZCWrLHqbsJ1dpU6q8sfO++sFfoCO
 YveRnTvcOdPyiaCGaiBPwz+DxnmVql9ABuOrjC0PqDp2TKMfE/pB4Z0ax1gzMq9B70IXi3c9Q6
@@ -29,7 +29,7 @@ e96H50iwaNVViLUViNboldEVpK0oOmtFwVdqygwFcxJ8AFtkIwWBMEp3GJdIry1f5uf/bKLLyY
 NKRS4oDjZu/GDPXCJ8BATffmZVDiIsJDQwUx3DU4LylQQyexjnfwDvp+NtYMdzPbF0v/ZphdGJ
 cosh/r1wQv1yk37DCBeC+EZJ0pW4j95wgBFYQR/FkJO4ycj73wsp5PEeeR34W6HAzez7OL33pY
 6VaPquuEs/+YIiac6ZpHXO4JghbZgG8m8arUjYsa4T4TiyvRvpB7w2unO5wFsbHSDKQzcaDGxV
-4TNoXxRW5NK2v11yvz7brWg6Nkx98=
+4TNoXxRW5NK2v11yvz7brWg6Nkx98="
   app: community-video-2020
   true:
     repo: jamesoddy8/co-vid20-20
