@@ -304,7 +304,7 @@ PLATFORMS
 DEPENDENCIES
   acts_as_votable
   bootsnap (>= 1.4.2)
-  bundler
+  bundler (~> 2.1.4)
   byebug
   capybara (~> 3.32)
   devise
