@@ -14,7 +14,7 @@ This project was inspired by the CO-VID 19 outbreak where most of the world had 
 
 # Our Approach
 
-We begain brain storming ideas on a Miro board, before finally settling on the idea above. We want a combination of familar technologies as well as new ones to keep our brain stimulating and our thirst for knowledge sated. 
+We began by brain storming ideas on a Miro board before finally settling on the idea above. We want a combination of familar technologies as well as new ones to keep our brain stimulating and our thirst for knowledge sated. 
 
 After deciding on the project we began planning out our approach with the use of Trello. We created user stories (see below) and organised priorites. 
 
