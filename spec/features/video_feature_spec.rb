@@ -15,7 +15,7 @@ RSpec.feature "video features", type: :feature do
     create_user_and_sign_up
     create_video
     visit "/videos"
-    click_link "Sign out"
+    click_link "Sign Out"
     create_user_and_sign_up_2
     expect(page).to have_no_link "Destroy"
   end
@@ -32,7 +32,7 @@ RSpec.feature "video features", type: :feature do
     create_user_and_sign_up
     create_video
     visit "/videos"
-    click_link "Sign out"
+    click_link "Sign Out"
     create_user_and_sign_up_2
     expect(page).to have_no_link "Edit"
   end
@@ -41,8 +41,7 @@ RSpec.feature "video features", type: :feature do
     create_user_and_sign_up
     create_video
     visit "/videos"
-    fill_in("Search", with: "random")
-    click_button "Search"
+    fill_in("search", with: "random\n")
     expect(page).to have_content "random"
   end
 
