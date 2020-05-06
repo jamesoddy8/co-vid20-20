@@ -50,6 +50,7 @@ group :development, :test do
   gem 'factory_bot_rails'
   gem 'shoulda-matchers'
   gem 'test-unit'
+  gem 'travis'
 end
 
 group :development do
@@ -66,3 +67,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'acts_as_votable'
 gem 'punching_bag'
+
+gem "psych", "~> 2.2"
