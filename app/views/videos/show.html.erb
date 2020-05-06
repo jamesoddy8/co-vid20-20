@@ -43,7 +43,7 @@
     <% end %>
   <% end %>
   <br>
-  <span class="likes-count">Likes: <%= @video.get_upvotes.size %></span> <span>Number of Views: <%= @video.hits %> </span>
+  <span> Likes: </span></span><span class="likes-count"><%= @video.get_upvotes.size %></span> <span>Number of Views: <%= @video.hits %> </span>
   <%= link_to like_video_path(@video), class:"like-btn", method: :put, remote: :true do %>
   <br>
     <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
@@ -69,6 +69,7 @@
     <%= f.submit %>
   <% end %>
 <script src="https://vjs.zencdn.net/7.7.5/video.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
 <%= link_to 'Edit', edit_video_path(@video) %> |
 <%= link_to 'Back', videos_path %>
