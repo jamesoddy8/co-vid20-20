@@ -3,9 +3,8 @@
  <div>
   <div>
    <% @conversations.each do |conversation| %>
-    <% unread_in_conversation %>
-    <%= @output.class %>
-    <% if @output == true %>
+    <% conversation.unread_in_conversation(conversation) %>
+    <% if conversation.output == true %>
      <%= "x" %>
      <% end %>
    <% if conversation.sender_id == current_user.id || conversation.recipient_id == current_user.id %>
