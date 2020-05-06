@@ -49,17 +49,19 @@
     
     <div class="video-card">
       <div class="video-size-for-card">
-        <%= link_to image_tag(video.thumbnail, style:'width:100%'), video_path %>
+      <a href="/videos/<%=video.id%>"><%= image_tag(video.thumbnail, style:'width:100%')%></a>
       </div>
       <div class="video-card-text-content">
-        <a href="/videos/<%=video.id%>"></a><h3><%= video.title %></h3></a>
+        <a href="/videos/<%=video.id%>"><h3><%= video.title %></h3></a>
           
           <% if current_user === video.user %>
             <%= link_to 'Edit', edit_video_path(video) %>
             <%= link_to 'Delete this video', video, method: :delete, data: { confirm: ' sure?' } %>
           <% end %>
-          Views: 0
+          Views: <%= video.hits %>
           <div style="text-align: right;">
+          Likes: <%= video.get_upvotes.size %>
+          <br>
             <% if video.tags.length != 0 %>
               Tags: 
               <% video.tags.each do |tag| %>
