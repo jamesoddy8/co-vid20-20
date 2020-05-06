@@ -1,7 +1,7 @@
   <% if @profile_picture.last != nil %>
     <div class="username-title-container">
       <div class="round-profile-picture">
-        <%= image_tag(@profile_picture.last.image, style:'width:100%') %>
+        <%= image_tag(@profile_picture.last.image, style:'height:100%') %>
       </div>
       <h1><%= @current_profile.username %>'s profile</h1>
         <% if current_user.id == params[:id].to_i %>
