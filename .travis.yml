@@ -3,9 +3,10 @@ rvm:
   - 2.6.3
 services:
   - postgresql
-install:
+before_install:
     - gem uninstall bundler
     - gem install bundler --version '2.1.4'
+    - bundle install
 before_script:
   - bundle exec rake db:create
   - bundle exec rake db:migrate
