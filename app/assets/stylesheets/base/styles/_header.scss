@@ -1,4 +1,5 @@
 @import "../styles/block";
+@import "../transition";
 header {
   padding: 1em;
   @include block(base-0, contrast-0, 1);
@@ -7,25 +8,27 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  img {
-    display: flex;
-    max-height: 50px;
-  }
-  #logo-text {
-    margin-left: 10px;
-    margin-bottom: 0px;
-    display: flex;
-    justify-content: flex-end;
-
-    font-weight: 900;
-    font-size: 25px;
-    @include themify($themes) {
-      color: themed(contrast-1);
+    a {
+      margin: 0;
+      margin-right: 10px;
+      display: flex;
+      justify-content: flex-end;
+      text-transform: uppercase;
+      font-weight: 900;
+      font-size: 25px;
+      @include themify($themes) {
+        color: themed(contrast-1);
+      }
+    }
+    img {
+      display: flex;
+      max-height: 50px;
     }
   }
   #headerSearchbar {
     input[type="search"] {
+      flex: 1;
+      @include transition(background-color 1s ease);
       @include block(base-1, contrast-0, 1);
       font-size: 16px;
       background-image: url("SearchIcon.svg");
@@ -35,8 +38,10 @@ header {
       padding: 12px 20px 12px 40px;
     }
     form {
+      flex: 1;
       display: flex;
     }
+    min-width: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -44,7 +49,9 @@ header {
   #account {
     @include themify($themes) {
       a {
+        align-items: center;
         padding-left: 10px;
+        margin-bottom: 0px;
         text-transform: uppercase;
         text-decoration: none;
         color: themed(contrast-1);

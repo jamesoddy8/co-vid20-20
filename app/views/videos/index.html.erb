@@ -1,20 +1,31 @@
-<p id="notice"><%= notice %></p>
 
-<h1>All Videos</h1>
-<div class="link-button">
-<%= link_to 'New Video', new_video_path %>
-</div>
+<div class="align-vertical">
+  <p id="notice"><%= notice %></p>
+  <nav>
+    <h1>All Videos!!!</h1>
+  </nav>
+  <div class="link-button">
+    <%= link_to 'New Video', new_video_path %>
+  </div>
   <% @videos.each do |video| %>
+  <div class="video-card">
     <div class="link-h2">
       <%= link_to video.title, video %>
     </div>
-      <p><%= video.description %></p>
-      <caption><%= raw video.all_tags %></caption>
-      <p>By <strong><%= link_to video.user.username, '/profiles/' + video.user.id.to_s %><strong> </p>
-      <%= link_to 'Show', video %></td>
-      <% if current_user === video.user %>
+    <p><%= video.description %></p>
+    <caption><%= raw video.all_tags %></caption>
+    <p>By <%= link_to video.user.username, '/profiles/' + video.user.id.to_s %></p>
+      <div class="link-button">
+        <%= link_to 'Show', video %></td>
+      </div>
+      <div class="link-button">
+        <% if current_user === video.user %>
         <%= link_to 'Edit', edit_video_path(video) %>
+      </div>
+      <div class="link-button">
         <%= link_to 'Destroy', video, method: :delete, data: { confirm: ' sure?' } %>
-      <% end %>
-  <% end %>
-<br>
+      </div>
+    </div>
+    <% end %>
+    <% end %>
+  </div>
