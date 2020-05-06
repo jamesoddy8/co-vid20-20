@@ -23,4 +23,4 @@ deploy:
     secure: "79b7caaf-7f59-43ac-9254-1b758ca82fdc"
   app: community-video-2020
   on:
-    repo: https://github.com/jamesoddy8/co-vid20-20
+    repo: jamesoddy8/co-vid20-20
