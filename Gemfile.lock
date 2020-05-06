@@ -318,6 +318,7 @@ DEPENDENCIES
   punching_bag
   rails (~> 6.0.2, >= 6.0.2.2)
   rails-controller-testing
+  rake
   rspec-rails (~> 4.0)
   sass-rails (>= 6)
   shoulda
