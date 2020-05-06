@@ -4,7 +4,7 @@ rvm:
 services:
   - postgresql
 before_script:
-  - bundle install
+  - gem install bundler:2.1.4
   - bundle exec rake db:create
   - bundle exec rake db:migrate
 dist: trusty
