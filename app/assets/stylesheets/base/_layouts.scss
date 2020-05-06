@@ -26,14 +26,11 @@
 }
 
 .video-card {
-  // flex-flow: row wrap;
-  // display: flex;
   justify-content: center;
-  
-  padding: 5px;
   margin: 10px;
   box-shadow: 0px 0px 5px 2px black;
   border-radius: 5px;
+  overflow: hidden;
 }
 
 .followers-container {
@@ -66,4 +63,43 @@
   border-radius: 5px;
   height: 80%;
   margin-bottom: 20px;
+}
+
+.video-card-text-content {
+  padding: 4px;
+  margin-left: 30px
+}
+
+.round-profile-picture {
+  width:100px; 
+  height:100px;
+  border-radius:50%;
+  position: relative;
+  overflow: hidden;
+}
+
+.video-size-for-card {
+  width:500px;
+  height:264px;
+  overflow: hidden;
+}
+
+.align-horizontal-search {
+  flex-flow: row wrap;
+  display: flex;
+  
+  align-items: center;
+}
+
+.video-card-search {
+  width: 70%;
+  
+  margin: 10px;
+  box-shadow: 0px 0px 5px 2px black;
+  border-radius: 5px;
+  overflow: hidden;
+  flex-flow: row wrap;
+  display: flex;
+  
+  align-items: center;
 }

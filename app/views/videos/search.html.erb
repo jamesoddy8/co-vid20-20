@@ -5,50 +5,126 @@
 <h2>Search results</h2>
 <% if @combined_results.present? %>
 
-  <h3>title results</h3>
-  <% @title_results.each do |result| %>
-    <div class="search-result-video">
-      <%= link_to "#{result.title}", result %>
-      by
-      <%= link_to result.user.username, '/users/' + result.user.id.to_s + '/profile' %>
-    </div>
-  <% end %>
+  <h3>Title results</h3>
+  <div class="align-horizontal-search">
+    <% @title_results.each do |video| %>
+        <div class="video-card-search">
+          <div class="video-size-for-card">
+            <%= link_to image_tag(video.thumbnail, style:'width:100%'), video %>
+          </div>
+          <div class="video-card-text-content">
+            <a href="/videos/<%=video.id%>"></a><h3><%= video.title %></h3></a>
+            Views: 0
+            <div style="text-align: right;">
+              <% if video.tags.length != 0 %>
+                Tags: 
+                <% video.tags.each do |tag| %>
+                  <%= tag.name %>
+                <% end %>
+              <% else %>
+                Tags: 0
+              <% end %>
+            </div>
+            by <%= link_to video.user.username, '/users/' + video.user.id.to_s + '/profile' %>
+        </div>  
+      </div>
+    <% end %>
+  </div>
 
   <h3>description results</h3>
-  <% @description_results.each do |result| %>
-    <div class="search-result-video">
-      <%= link_to "#{result.title}", result %>
-      by
-      <%= link_to result.user.username, '/users/' + result.user.id.to_s + '/profile' %>
+  <% @description_results.each do |video| %>
+  <div class="video-card-search">
+    <div class="video-size-for-card">
+      <%= link_to image_tag(video.thumbnail, style:'width:100%'), video %>
     </div>
+    <div class="video-card-text-content">
+      <a href="/videos/<%=video.id%>"></a><h3><%= video.title %></h3></a>
+      Views: 0
+      <div style="text-align: right;">
+        <% if video.tags.length != 0 %>
+          Tags: 
+          <% video.tags.each do |tag| %>
+            <%= tag.name %>
+          <% end %>
+        <% else %>
+          Tags: 0
+        <% end %>
+      </div>
+      by <%= link_to video.user.username, '/users/' + video.user.id.to_s + '/profile' %>
+  </div>  
+</div>
   <% end %>
 
-  <h3>tags results</h3>
-  <% @tags_results.each do |result| %>
-    <div class="search-result-video">
-      <%= link_to "#{result.title}", result %>
-      by
-      <%= link_to result.user.username, '/users/' + result.user.id.to_s + '/profile' %><br>
-      tags: <%= result.all_tags %><br>
+  <h3>Tags results</h3>
+  <% @tags_results.each do |video| %>
+  <div class="video-card-search">
+    <div class="video-size-for-card">
+      <%= link_to image_tag(video.thumbnail, style:'width:100%'), video %>
     </div>
+    <div class="video-card-text-content">
+      <a href="/videos/<%=video.id%>"></a><h3><%= video.title %></h3></a>
+      Views: 0
+      <div style="text-align: right;">
+        <% if video.tags.length != 0 %>
+          Tags: 
+          <% video.tags.each do |tag| %>
+            <%= tag.name %>
+          <% end %>
+        <% else %>
+          Tags: 0
+        <% end %>
+      </div>
+      by <%= link_to video.user.username, '/users/' + video.user.id.to_s + '/profile' %>
+  </div>  
+</div>
   <% end %>
 
-  <h3>user results</h3>
-  <% @user_results.each do |result| %>
-    <div class="search-result-video">
-      <%= link_to "#{result.title}", result %>
-      by
-      <%= link_to result.user.username, '/users/' + result.user.id.to_s + '/profile' %>
+  <h3>User results</h3>
+  <% @user_results.each do |video| %>
+  <div class="video-card-search">
+    <div class="video-size-for-card">
+      <%= link_to image_tag(video.thumbnail, style:'width:100%'), video %>
     </div>
+    <div class="video-card-text-content">
+      <a href="/videos/<%=video.id%>"></a><h3><%= video.title %></h3></a>
+      Views: 0
+      <div style="text-align: right;">
+        <% if video.tags.length != 0 %>
+          Tags: 
+          <% video.tags.each do |tag| %>
+            <%= tag.name %>
+          <% end %>
+        <% else %>
+          Tags: 0
+        <% end %>
+      </div>
+      by <%= link_to video.user.username, '/users/' + video.user.id.to_s + '/profile' %>
+  </div>  
+</div>
   <% end %>
 
-  <h3>combined results</h3>
-  <% @combined_results.each do |result| %>
-    <div class="search-result-video">
-      <%= link_to "#{result.title}", result %>
-      by
-      <%= link_to result.user.username, '/users/' + result.user.id.to_s + '/profile' %>
+  <h3>Combined results</h3>
+  <% @combined_results.each do |video| %>
+  <div class="video-card-search">
+    <div class="video-size-for-card">
+      <%= link_to image_tag(video.thumbnail, style:'width:100%'), video %>
     </div>
+    <div class="video-card-text-content">
+      <a href="/videos/<%=video.id%>"></a><h3><%= video.title %></h3></a>
+      Views: 0
+      <div style="text-align: right;">
+        <% if video.tags.length != 0 %>
+          Tags: 
+          <% video.tags.each do |tag| %>
+            <%= tag.name %>
+          <% end %>
+        <% else %>
+          Tags: 0
+        <% end %>
+      </div>
+      by <%= link_to video.user.username, '/users/' + video.user.id.to_s + '/profile' %>
+  </div>  
+</div>
   <% end %>
 
   <% else %>

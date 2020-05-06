@@ -1,6 +1,6 @@
   <% if @profile_picture.last != nil %>
     <div class="username-title-container">
-      <div style="width:100px; height:100px;border-radius:50%;position: relative;overflow: hidden;">
+      <div class="round-profile-picture">
         <%= image_tag(@profile_picture.last.image, style:'width:100%') %>
       </div>
       <h1><%= @current_profile.username %>'s profile</h1>
@@ -48,36 +48,28 @@
     <% @videos.each do |video| %>
     
     <div class="video-card">
-      <p><a href="/videos/<%=video.id%>"><%= video.title %></a></p>
-        <video
-        id="my-video"
-        class="video-js"
-        controls
-        preload="auto"
-        width="500"
-        height="264"
-        poster="<%= url_for(video.thumbnail) %>"
-        data-setup="{}"
-        >
-        <source src="<%= url_for(video.clip) %>" type="video/mp4" />
-        
-        </video>
-        <br>
-        <% if current_user === video.user %>
-          <%= link_to 'Edit', edit_video_path(video) %>
-          <%= link_to 'Delete this video', video, method: :delete, data: { confirm: ' sure?' } %>
-        <% end %>
-        Views: 0
-        <div style="text-align: right;">
-          <% if video.tags.length != 0 %>
-            Tags: 
-            <% video.tags.each do |tag| %>
-              <%= tag.name %>
-            <% end %>
-          <% else %>
-            Tags: 0
+      <div class="video-size-for-card">
+        <%= link_to image_tag(video.thumbnail, style:'width:100%'), video_path %>
+      </div>
+      <div class="video-card-text-content">
+        <a href="/videos/<%=video.id%>"></a><h3><%= video.title %></h3></a>
+          
+          <% if current_user === video.user %>
+            <%= link_to 'Edit', edit_video_path(video) %>
+            <%= link_to 'Delete this video', video, method: :delete, data: { confirm: ' sure?' } %>
           <% end %>
-        </div>
+          Views: 0
+          <div style="text-align: right;">
+            <% if video.tags.length != 0 %>
+              Tags: 
+              <% video.tags.each do |tag| %>
+                <%= tag.name %>
+              <% end %>
+            <% else %>
+              Tags: 0
+            <% end %>
+          </div>
+      </div>
       </div>
     <% end %>
 
