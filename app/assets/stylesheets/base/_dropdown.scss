@@ -1,3 +1,5 @@
+@import "themes";
+
 .dropbtn:hover,
 .dropbtn:focus {
   background-color: #2980b9;
@@ -10,9 +12,13 @@
 
 .dropdown-content {
   display: none;
+  right: 0;
+
   position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
+  @include themify($themes) {
+    background-color: themed(base-1);
+  }
+  min-width: 180px;
   overflow: auto;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
@@ -26,7 +32,9 @@
 }
 
 .dropdown a:hover {
-  background-color: #ddd;
+  @include themify($themes) {
+    background-color: themed(base-2);
+  }
 }
 
 .show {

@@ -62,6 +62,7 @@ window.onclick = function(event) {
 				<div class="dropdown">
   				<button onclick="myFunction()" class="dropbtn"><p>Account</p></button>
   					<div id="myDropdown" class="dropdown-content">
+						<a href ="/videos">All videos</a>
 						<%= link_to 'Upload a new video', new_video_path %>
 						<%= link_to 'Mailbox', conversations_path %>
 						<%= link_to 'View your profile', '/profiles/' + current_user.id.to_s %>
