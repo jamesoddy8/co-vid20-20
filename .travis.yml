@@ -1,35 +1,26 @@
 language: ruby
 rvm:
-  - 2.6.3
+- 2.6.3
 addons:
-  - postgresql: "9.6"
+- postgresql: '9.6'
 services:
-  - postgresql
+- postgresql
 before_install:
-  - gem uninstall bundler
-  - gem install bundler --version '2.1.4'
-  - bundle install
-  - npm install
+- gem uninstall bundler
+- gem install bundler --version '2.1.4'
+- bundle install
+- npm install
 before_script:
-  - bundle exec rake db:create
-  - bundle exec rake db:migrate
+- bundle exec rake db:create
+- bundle exec rake db:migrate
 dist: trusty
 script:
-  - bundle exec rspec
+- bundle exec rspec
 deploy:
   provider: heroku
   strategy: api
   api_key:
-    secure: "gBbQ+nF2kt2VJjJhLbycg1/8sUH0ixDVlOwsVbvm7wfzi/XNvuut20wzeBth0i
-ib5nXgEtNJuwJOWnESGdbdSw4ip5g9oxSjfp3vHiWMj0NUyaKjN3f1T/T4DDpqKu/NWP9UO6ZV
-8JIZ4Ute29u6nOcx6voAMbNIxwOAAuccCGwxWBdDZoTm8xZCWrLHqbsJ1dpU6q8sfO++sFfoCO
-YveRnTvcOdPyiaCGaiBPwz+DxnmVql9ABuOrjC0PqDp2TKMfE/pB4Z0ax1gzMq9B70IXi3c9Q6
-e96H50iwaNVViLUViNboldEVpK0oOmtFwVdqygwFcxJ8AFtkIwWBMEp3GJdIry1f5uf/bKLLyY
-0Nr8xS4/mC7rIQRhWmNAAMWv9b444VXebQsJfGu0xMWh9tnrQAYH2V8GZidP3pLBZkjoW9Rsbi
-NKRS4oDjZu/GDPXCJ8BATffmZVDiIsJDQwUx3DU4LylQQyexjnfwDvp+NtYMdzPbF0v/ZphdGJ
-cosh/r1wQv1yk37DCBeC+EZJ0pW4j95wgBFYQR/FkJO4ycj73wsp5PEeeR34W6HAzez7OL33pY
-6VaPquuEs/+YIiac6ZpHXO4JghbZgG8m8arUjYsa4T4TiyvRvpB7w2unO5wFsbHSDKQzcaDGxV
-4TNoXxRW5NK2v11yvz7brWg6Nkx98="
+    secure: EIxMVXbU3a6iaSCVdvHw6wOc9wNTHy23/u8rCM6BMK72TkkhjWYhCR3bpO9r4VHwZBZJJyfhujoumrNxj5NgiJESQ6koeJixdkDg+rWCxsPczw+xzazAbUEO2c40X40F04XH6CgAyAUmzJ+ss0OqU7kL3FdjvwbIW0MEnGDT0r+FyrorAOqgX1do0MDY0MbFNhzIx5P/bi7Or5yO5eXqtO7UJcpWrKlsYz1l2xNkxDMKF4npynaAxKYoflvpFdIslueiMltmX78VIf3evI0VXVYo/4tNsaBYaFNKIizMU0+4dFpZ6AB3Ab/FwXgrO8FwDLJ8uFsFSD8LGlm5wLbwx2f/1QDpxzkRaHnsyjVeZmo0KX0necmpjPwm8bWaViFdqKhePW9uPpEWMhB7aP35Vc21pnxEd32pNYfpeDPeYzUcOgEJr/2w/Z0C8TmyiuUfOKbFrIC1wgjoFTj6Sd/La83xdEn57jRT3Q+Gf3u5vf1lK9E0syxTsYPHFq8wFY1Clx5wO3RbQL4jQGi/29hig/hvrzdDLIKvFvfMuGTSIeg6Gux0WSrPlZWPqh6szE1I7WsNupKX5wiYETolUCeyVA2JfCVFCoh4+Jk80bD/4/mk4gl1VEipv9erET0+xEjH20UUaQwT3kyhbF+zjS22rF6yJ6PXl8WyILjUSLkhUGw=
   app: community-video-2020
-  true:
+  on:
     repo: jamesoddy8/co-vid20-20
