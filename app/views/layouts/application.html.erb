@@ -67,6 +67,8 @@ window.onclick = function(event) {
 						<%= link_to 'Mailbox', conversations_path %>
 						<%= link_to 'View your profile', '/profiles/' + current_user.id.to_s %>
 						<%= link_to 'Sign Out', destroy_user_session_path, method: :delete%>
+												<a class="default" onclick="changeClass()" id="myButton">Toggle Theme</a>
+
   					</div>
 					</div>
 					<% else %>
@@ -83,7 +85,6 @@ window.onclick = function(event) {
 			<main >
 				<!-- Main content -->
 				<%= yield %>
-				<button class="default" onclick="changeClass()" id="myButton">Click Here!</button>
 			</main>
 			<aside>
 				<!-- Sidebar -->
