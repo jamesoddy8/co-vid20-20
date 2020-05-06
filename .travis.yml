@@ -10,8 +10,6 @@ before_install:
   - gem install bundler --version '2.1.4'
   - bundle install
   - npm install
-install:
-  - yarn install
 before_script:
   - bundle exec rake db:create
   - bundle exec rake db:migrate
