@@ -11,31 +11,31 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="upload-video-field">
     <%= form.label :title %>
     <%= form.text_field :title %>
   </div>
 
-  <div class="field">
+  <div class="upload-video-field">
     <%= form.label :description %>
-    <%= form.text_area :description %>
+    <%= form.text_area :description, :size => 200 %>
   </div>
 
-  <div class="field">
+  <div class="upload-video-field">
     <%= form.label :clip %>
     <%= form.file_field :clip %>
   </div>
 
-  <div class="field">
+  <div class="upload-video-field">
     <%= form.label :thumbnail %>
     <%= form.file_field :thumbnail %>
   </div>
-  
-  <div class="large-10 large-centered columns">
-    <%= form.text_field :all_tags, placeholder: "tags separated with commas" %>
+
+  <div class="upload-video-field">
+    <%= form.text_field :all_tags, placeholder: "tags separated with commas", :size => 100 %>
   </div>
 
-  <div class="actions">
+  <div class="upload-video-field", style="text-align:center">
     <%= form.submit %>
   </div>
 <% end %>
