@@ -7,7 +7,7 @@ RSpec.describe "Donating to user", type: :feature do
         create_user_and_sign_up
         create_video
         visit "/videos"
-        click_link "Sign out"
+        click_link "Sign Out"
         create_user_and_sign_up_2
         click_link "All videos"
         click_link "Show"
