@@ -19,20 +19,20 @@ class ConversationsController < ApplicationController
     redirect_to conversation_messages_path(@conversation)
   end
   
-  def unread_in_conversation
-    p "-=-=-=-=-=-=-=-=-=-=-=-=-"
-    @conversation = Conversation.find(params[:conversation_id])
-    @unread = []
-      @conversation.messages.each do |message|
-        if message.read == false
-          # if message.user_id != current_user.id
-            @unread << message
-          # end
-        end
-      end
-    @unread.length == 0 ? @output = false : @output = true
-    return @output
-  end
+  # def unread_in_conversation
+  #   p "-=-=-=-=-=-=-=-=-=-=-=-=-"
+  #   @conversation = Conversation.find(params[:conversation_id])
+  #   @unread = []
+  #     @conversation.messages.each do |message|
+  #       if message.read == false
+  #         # if message.user_id != current_user.id
+  #           @unread << message
+  #         # end
+  #       end
+  #     end
+  #   @unread.length == 0 ? @output = false : @output = true
+  #   return @output
+  # end
   
   private
   def conversation_params

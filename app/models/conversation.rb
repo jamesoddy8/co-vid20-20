@@ -17,9 +17,9 @@ class Conversation < ApplicationRecord
     # @current_user = current_user
       conversation.messages.each do |message|
         if message.read == false
-          if message.user_id != conversation.recipient_id
+          # if message.user_id != current_user.id
             @unread << message
-          end
+          # end
         end
       end
       @unread.length == 0 ? @output = false : @output = true

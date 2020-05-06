@@ -2,30 +2,32 @@ class MessagesController < ApplicationController
 before_action do
   @conversation = Conversation.find(params[:conversation_id])
 end
-
+  # TO DO refactor .each loop into new method
   def index
-    @over_ten = false
     @messages = @conversation.messages.order(id: :asc)
-    # puts "-=-=-=-=-=-=-=-=-=-=-=-=-"
-    # unread_in_conversation
-    if @messages.length > 10
-      @over_ten = true
+    @messages.length > 10 ? @over_ten = true : @over_ten = false
+    if @over_ten == true
       @messages = @messages[-10..-1]
-      # This only updates read status for last ≤10 messages
       @messages.each do |message|
         if message.user_id != current_user.id
           Message.find(message.id).update(read: true)
-          # @messages.length.times do
-          #   @unread.pop
-          # end
-
+        end
+      end
+    elsif @over_ten == false
+      @messages = @conversation.messages.order(id: :asc)
+      @messages.each do |message|
+        if message.user_id != current_user.id
+          Message.find(message.id).update(read: true)
         end
       end
     end
     if params[:m]
       @messages = @conversation.messages.order(id: :asc)
-      Message.all.update(read: true)
-      # @output = false
+      @messages.each do |message|
+        if message.user_id != current_user.id
+          Message.find(message.id).update(read: true)
+        end
+      end
     end
     @message = @conversation.messages.new
   end
