@@ -1,28 +1,28 @@
-## Stephan Ellenberger | Orion Reed | John Baxter | Kuba Jawor | James Oddy | George Swarbrick 
+## Stephan Ellenberger | Orion Reed | John Baxter | Kuba Jawor | James Oddy | George Swarbrick
 ### Present:
 # Community Video 2020
 
 This project was completed remotely.
 
-We were given 7 days of feature building along with 1 day of cleaning up and then 1 day for presentations. 
+We were given 7 days of feature building along with 1 day of cleaning up and then 1 day for presentations.
 
 Our goal was to create a website that allowed creative people to post free tutorials on whatever they would like to share.
 
-As a user you have the option to follow, like and even donate to that creator. You also have your own profile to share and upload your own videos should you wish. As well as have a home page that contains the latest videos relevent to you; the specifc user. 
+As a user you have the option to follow, like and even donate to that creator. You also have your own profile to share and upload your own videos should you wish. As well as have a home page that contains the latest videos relevant to you; the specific user.
 
-This project was inspired by the CO-VID 19 outbreak where most of the world had to respect social distancing and have most of their lives occur in the online world. 
+This project was inspired by the CO-VID 19 outbreak where most of the world had to respect social distancing and have most of their lives occur in the online world.
 
 # Our Approach
 
-We began by brain storming ideas on a Miro board before finally settling on the idea above. We want a combination of familar technologies as well as new ones to keep our brain stimulating and our thirst for knowledge sated. 
+We began by brain storming ideas on a Miro board before finally settling on the idea above. We want a combination of familiar technologies as well as new ones to keep our brain stimulating and our thirst for knowledge sated. 
 
-After deciding on the project we began planning out our approach with the use of Trello. We created user stories (see below) and organised priorites. 
+After deciding on the project we began planning out our approach with the use of Trello. We created user stories (see below) and organised priorites.
 
-We were also sure to plan out breaks and time management was key. 
+We were also sure to plan out breaks and time management was key.
 
 # Quickstart
 
-First, clone this repository. Then: 
+First, clone this repository. Then:
 
 ```ruby
 $ bundle install
@@ -42,7 +42,7 @@ I would like to sign up/in and sign out
 ```
 ```ruby
 As a User,
-So i can be part of the Community, 
+So i can be part of the Community,
 I would like to upload a video
 ```
 ```ruby
@@ -81,7 +81,7 @@ So that i can contact other users,
 I would like to send and receive message
 ```
 ```ruby
-As a user, 
+As a user,
 So that i can keep track of people i enjoy,
 I would like the option to follow them
 ```

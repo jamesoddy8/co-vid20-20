@@ -1,26 +1,27 @@
 language: ruby
 rvm:
-  - 2.6.3
+- 2.6.3
 addons:
-  - postgresql: "9.6"
+- postgresql: '9.6'
 services:
-  - postgresql
+- postgresql
 before_install:
-  - gem uninstall bundler
-  - gem install bundler --version '2.1.4'
-  - bundle install
-  - npm install
+- gem uninstall bundler
+- gem install bundler --version '2.1.4'
+- bundle install
+- npm install
 before_script:
-  - bundle exec rake db:create
-  - bundle exec rake db:migrate
+- bundle exec rake db:create
+- bundle exec rake db:migrate
 dist: trusty
 script:
-  - bundle exec rspec
+- bundle exec rspec
 deploy:
+  skip_cleanup: true
   provider: heroku
   strategy: api
   api_key:
-    secure: "79b7caaf-7f59-43ac-9254-1b758ca82fdc"
+    secure: "VYTtiOvSCfbXKYqxO0uAkEUSN/EtV4PheN2F7hV6AEBNDmSGubaXQj1XHn0FYExcd4GJcM9uJCdOgujXjw00udLjCIQDiqF6Adnuzs9vEG3T07jcEf8w1N5u98cA7SkpGT1W3xd/rUSSYO8Iznk+t+wK4a5AXljXYHxGNn48W9iSF+5MhFQLERWNYybEA9M8V2Hk+8Zmqs3nFgsy/v/1queqPc4SU/cUfkRAVyRkSbKWwdA/cmsqEzNErX0LnleVtV7bu+cnLZm7x4TgKe/c/aQW6MUHZ2Tos1TPwAwk0AKMNzeFzmnN0Pl8209C/oajEELxj8rTqRrnOM0RD3sIGwtOe/VMHHfCnXLTTIHTr3ypvtSUtM7zFJ8n5jWFEtSmO4IiRqJtwl+0K2KKryy8mWWch64gzcsgE3Mwgz+tXTyigfYHIW8SOQrLWp5j/R2XxsBn+NBKp+mlS5GcPqcezCGWrnTacrgmLvj0EP/huaVIlp/NR4Ef9J4XzsU+PR37gVXk+TQRAxjRkqGi19CgTHVziWBQ2eYO+5I+Xh+WyG639bZQmLtK/tMCMeXv8sbY1mu+LFf2QOyYEytocKvQx4ljSXnESBjEhpZvDfuPeHDwZBaXeKgeuGZlZLeyxzJ3XHLu00QzmIeZ9GBe3oy3myIBRe/kLLYYa18zz5UELOg="
   app: community-video-2020
   on:
     repo: jamesoddy8/co-vid20-20
