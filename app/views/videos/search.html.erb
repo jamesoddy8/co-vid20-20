@@ -8,7 +8,7 @@
   <h3>Title results</h3>
   <div class="align-horizontal-search">
     <% @title_results.each do |video| %>
-        <div class="video-card-search">
+        <div class="video-card">
           <div class="video-size-for-card">
             <%= link_to image_tag(video.thumbnail, style:'width:100%'), video %>
           </div>
@@ -25,7 +25,7 @@
                 Tags: 0
               <% end %>
             </div>
-            by <%= link_to video.user.username, '/users/' + video.user.id.to_s + '/profile' %>
+            by <%= link_to video.user.username, '/profiles/' + video.user.id.to_s  %>
         </div>  
       </div>
     <% end %>
@@ -33,7 +33,7 @@
 
   <h3>description results</h3>
   <% @description_results.each do |video| %>
-  <div class="video-card-search">
+  <div class="video-card">
     <div class="video-size-for-card">
       <%= link_to image_tag(video.thumbnail, style:'width:100%'), video %>
     </div>
@@ -50,14 +50,14 @@
           Tags: 0
         <% end %>
       </div>
-      by <%= link_to video.user.username, '/users/' + video.user.id.to_s + '/profile' %>
+      by <%= link_to video.user.username, '/profiles/' + video.user.id.to_s %>
   </div>  
 </div>
   <% end %>
 
   <h3>Tags results</h3>
   <% @tags_results.each do |video| %>
-  <div class="video-card-search">
+  <div class="video-card">
     <div class="video-size-for-card">
       <%= link_to image_tag(video.thumbnail, style:'width:100%'), video %>
     </div>
@@ -74,14 +74,14 @@
           Tags: 0
         <% end %>
       </div>
-      by <%= link_to video.user.username, '/users/' + video.user.id.to_s + '/profile' %>
+      by <%= link_to video.user.username, '/profiles/' + video.user.id.to_s %>
   </div>  
 </div>
   <% end %>
 
   <h3>User results</h3>
   <% @user_results.each do |video| %>
-  <div class="video-card-search">
+  <div class="video-card">
     <div class="video-size-for-card">
       <%= link_to image_tag(video.thumbnail, style:'width:100%'), video %>
     </div>
@@ -98,14 +98,14 @@
           Tags: 0
         <% end %>
       </div>
-      by <%= link_to video.user.username, '/users/' + video.user.id.to_s + '/profile' %>
+      by <%= link_to video.user.username, '/profiles/' + video.user.id.to_s %>
   </div>  
 </div>
   <% end %>
 
   <h3>Combined results</h3>
   <% @combined_results.each do |video| %>
-  <div class="video-card-search">
+  <div class="video-card">
     <div class="video-size-for-card">
       <%= link_to image_tag(video.thumbnail, style:'width:100%'), video %>
     </div>
@@ -122,7 +122,7 @@
           Tags: 0
         <% end %>
       </div>
-      by <%= link_to video.user.username, '/users/' + video.user.id.to_s + '/profile' %>
+      by <%= link_to video.user.username, '/profiles/' + video.user.id.to_s %>
   </div>  
 </div>
   <% end %>

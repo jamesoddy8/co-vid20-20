@@ -7,7 +7,7 @@ RSpec.feature "video features", type: :feature do
     create_user_and_sign_up
     create_video
     click_link "View your profile"
-    click_link "Delete this video"
+    click_link "Delete"
     expect(page).to have_content "Video was successfully destroyed."
   end
 

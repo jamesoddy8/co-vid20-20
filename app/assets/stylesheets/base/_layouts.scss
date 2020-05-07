@@ -26,24 +26,6 @@
   align-items: center;
 }
 
-.video-card {
-  @include themify($themes) {
-    border: 1px solid themed(base-1);
-    background-color: themed(base-1);
-  }
-  width: 500px;
-
-  width: 70%;
-  margin: 10px;
-  filter: shadow(1);
-  border-radius: 5px;
-  overflow: hidden;
-  flex-flow: row wrap;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-}
-
 .followers-container {
   width: 50%;
 }
@@ -117,7 +99,7 @@
   align-items: center;
 }
 
-.video-card-search {
+.video-card {
   @include themify($themes) {
     border: 1px solid themed(base-1);
     background-color: themed(base-1);
