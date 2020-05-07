@@ -19,6 +19,7 @@
 @import "base/grid";
 @import "base/shadow";
 @import "base/transition";
+@import "base/styles/block";
 
 .container {
   font-family: "Brandon Grotesque", sans-serif;
@@ -26,4 +27,8 @@
     background-color: themed(base-0);
     color: themed(contrast-0);
   }
+}
+
+textarea {
+  @include block(base-0, contrast-1, 1);
 }

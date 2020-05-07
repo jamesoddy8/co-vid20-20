@@ -1,5 +1,12 @@
 @import "themes";
 
+.dropbtn {
+  padding: 10px;
+  p {
+    margin: 0;
+  }
+}
+
 .dropbtn:hover,
 .dropbtn:focus {
   outline: none;
