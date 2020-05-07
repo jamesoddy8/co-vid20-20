@@ -26,6 +26,8 @@ First, clone this repository. Then:
 
 ```ruby
 $ bundle install
+$ npm install
+$ yarn install --check-files
 $ rails db:create
 $ rails db:migrate
 
