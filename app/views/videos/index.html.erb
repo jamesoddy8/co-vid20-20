@@ -13,19 +13,16 @@
       <%= link_to image_tag(video.thumbnail, style:'width:100%'), video %>
     </div>
     <div class="video-card-text-content">
-      <a href="/videos/<%=video.id%>"></a><h3><%= video.title %></h3></a>
-      Views: <%= video.hits %>
+      <a href="/videos/<%=video.id%>"><h3><%= video.title %></h3></a>
+      <p><%= video.hits %> views</p>
       <div style="text-align: right;">
-        <% if video.tags.length != 0 %>
-          <p>Tags: 
+        <% if video.tags.length > 0 %>
           <% video.tags.each do |tag| %>
-            <%= tag.name %></p>
+          <p><%= "#{tag.name.split(',').map { |t| "##{t}"}. join(' ')}" %></p>
           <% end %>
-        <% else %>
-          Tags: 0
         <% end %>
       </div>
-      by <%= link_to video.user.username, '/profiles/' + video.user.id.to_s %>
+      <p>by <%= link_to video.user.username, '/profiles/' + video.user.id.to_s %></p>
   </div>  
 </div>
   <% end %>

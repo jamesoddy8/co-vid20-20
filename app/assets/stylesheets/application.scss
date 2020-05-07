@@ -30,5 +30,7 @@
 }
 
 textarea {
-  @include block(base-0, contrast-1, 0);
+  width: 300px;
+  height: 100px;
+  @include block(base-1, contrast-1, 0);
 }

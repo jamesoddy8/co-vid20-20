@@ -54,22 +54,20 @@
       <div class="video-card-text-content">
         <a href="/videos/<%=video.id%>"><h3><%= video.title %></h3></a>
           
+          <p><%= video.hits %> views</p>
+          <div style="text-align: right;">
+          <p><%= video.get_upvotes.size %> likes</p>
+          <% if video.tags.length > 0 %>
+          <% video.tags.each do |tag| %>
+          <p><%= "#{tag.name.split(',').map { |t| "##{t}"}. join(' ')}" %></p>
+          <% end %>
+        <% end %>
+          </div>
+          <div>
           <% if current_user === video.user %>
             <%= link_to 'Edit', edit_video_path(video) %>
-            <%= link_to 'Delete this video', video, method: :delete, data: { confirm: ' sure?' } %>
+            <%= link_to 'Delete', video, method: :delete, data: { confirm: ' sure?' } %>
           <% end %>
-          Views: <%= video.hits %>
-          <div style="text-align: right;">
-          Likes: <%= video.get_upvotes.size %>
-          <br>
-            <% if video.tags.length != 0 %>
-              Tags: 
-              <% video.tags.each do |tag| %>
-                <%= tag.name %>
-              <% end %>
-            <% else %>
-              Tags: 0
-            <% end %>
           </div>
       </div>
       </div>

@@ -45,18 +45,24 @@ button {
   }
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 input {
-  @include block(base-0, contrast-0, 0);
-  padding: 12px 5px 12px 10px;
+  @include block(base-1, contrast-0, 0);
+  padding: 12px 10px 12px 10px;
   margin: 5px;
   outline: none;
   &:hover {
-    @include block(base-1, contrast-0, 0);
+    @include block(base-2, contrast-0, 1);
   }
   &:active {
-    @include block(base-2, contrast-0, 0);
+    @include block(base-3, contrast-0, 2);
   }
   &:focus {
-    @include block(base-1, contrast-0, 1);
+    @include block(base-2, contrast-0, 1);
   }
 }
