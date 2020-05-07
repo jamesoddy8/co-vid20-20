@@ -2,7 +2,7 @@
 <div class="align-vertical">
   <p id="notice"><%= notice %></p>
   <nav>
-    <h1>All Videos!!!</h1>
+    <h1>All Videos</h1>
   </nav>
   <div class="link-button">
     <%= link_to 'New Video', new_video_path %>
@@ -17,15 +17,15 @@
       Views: <%= video.hits %>
       <div style="text-align: right;">
         <% if video.tags.length != 0 %>
-          Tags: 
+          <p>Tags: 
           <% video.tags.each do |tag| %>
-            <%= tag.name %>
+            <%= tag.name %></p>
           <% end %>
         <% else %>
           Tags: 0
         <% end %>
       </div>
-      by <%= link_to video.user.username, '/users/' + video.user.id.to_s + '/profile' %>
+      by <%= link_to video.user.username, '/profiles/' + video.user.id.to_s %>
   </div>  
 </div>
   <% end %>
