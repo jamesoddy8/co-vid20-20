@@ -1,4 +1,5 @@
 @import "themes";
+@import "transition";
 @font-face {
   font-family: "Brandon Grotesque";
   src: url("Brandon_reg.otf");
@@ -28,6 +29,18 @@
   src: url("Brandon_blk.otf");
   font-weight: 900;
   font-style: normal;
+}
+
+@mixin base-type {
+  font-family: "Brandon Grotesque";
+  margin: 0px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  font-weight: 400;
+  font-size: 16px;
+  @include themify($themes) {
+    color: themed(contrast-1);
+  }
 }
 
 @mixin h1 {
@@ -89,22 +102,28 @@
 }
 
 h1 {
+  @include transition(color 1s ease);
   @include h1;
 }
 h2 {
+  @include transition(color 1s ease);
   @include h2;
 }
 h3 {
+  @include transition(color 1s ease);
   @include h3;
 }
 caption {
+  @include transition(color 1s ease);
   @include caption;
 }
 p {
+  @include transition(color 1s ease);
   @include p;
 }
 
 a {
+  @include transition(color 1s ease);
   @include a;
 }
 

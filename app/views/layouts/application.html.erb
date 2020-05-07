@@ -14,6 +14,27 @@
 				}
 			}
 		</script>
+		<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
 		<title>Covid2020</title>
 		<%= csrf_meta_tags %>
 		<%= csp_meta_tag %>
@@ -24,8 +45,10 @@
 		<div class="container">
 			<header>
 				<div id="logo-and-title">
+					<a href= <%= home_index_path %>>
 					<%= image_tag("Logo") %>
-					<a id="logo-text">HOME</a>
+					</a>
+					<%= link_to 'Home', home_index_path %>
 				</div>
 				<div id="headerSearchbar">
 					<%= form_tag(search_page_path, method: :get) do %>
@@ -34,19 +57,26 @@
 					<% end %>
 				</div>
 				<div id="account">
+				<div class = "align-horizontal">
 					<% if current_user %>
-						<%= link_to 'Home', home_index_path %>
-						<%= link_to 'Sign Out', destroy_user_session_path, method: :delete%>
-						<%= link_to 'View your profile', '/profiles/' + current_user.id.to_s %>
+				<div class="dropdown">
+  				<button onclick="myFunction()" class="dropbtn"><p>Account</p></button>
+  					<div id="myDropdown" class="dropdown-content">
+						<a href ="/videos">All videos</a>
 						<%= link_to 'Upload a new video', new_video_path %>
-						<%= link_to 'All videos', videos_path %>
 						<%= link_to 'Mailbox', conversations_path %>
+						<%= link_to 'View your profile', '/profiles/' + current_user.id.to_s %>
+						<%= link_to 'Sign Out', destroy_user_session_path, method: :delete%>
+												<a class="default" onclick="changeClass()" id="myButton">Toggle Theme</a>
+
+  					</div>
+					</div>
 					<% else %>
 						<%= link_to 'Sign Up', new_user_registration_path %>
 						<%= link_to 'Sign in', new_user_session_path%>
 					<% end %>
 				</div>
-				<%# <div id="search"></div> %>
+				</div>
 				<!-- Header content -->
 			</header>
 			<nav>
@@ -55,7 +85,6 @@
 			<main >
 				<!-- Main content -->
 				<%= yield %>
-				<button class="default" onclick="changeClass()" id="myButton">Click Here!</button>
 			</main>
 			<aside>
 				<!-- Sidebar -->

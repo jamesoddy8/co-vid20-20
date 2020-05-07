@@ -1,20 +1,32 @@
-<p id="notice"><%= notice %></p>
 
-<h1>All Videos</h1>
-<div class="link-button">
-<%= link_to 'New Video', new_video_path %>
-</div>
+<div class="align-vertical">
+  <p id="notice"><%= notice %></p>
+  <nav>
+    <h1>All Videos!!!</h1>
+  </nav>
+  <div class="link-button">
+    <%= link_to 'New Video', new_video_path %>
+  </div>
   <% @videos.each do |video| %>
-    <div class="link-h2">
-      <%= link_to video.title, video %>
+  <div class="video-card-search">
+    <div class="video-size-for-card">
+      <%= link_to image_tag(video.thumbnail, style:'width:100%'), video %>
     </div>
-      <p><%= video.description %></p>
-      <caption><%= raw video.all_tags %></caption>
-      <p>By <strong><%= link_to video.user.username, '/profiles/' + video.user.id.to_s %><strong> </p>
-      <%= link_to 'Show', video %></td>
-      <% if current_user === video.user %>
-        <%= link_to 'Edit', edit_video_path(video) %>
-        <%= link_to 'Destroy', video, method: :delete, data: { confirm: ' sure?' } %>
-      <% end %>
+    <div class="video-card-text-content">
+      <a href="/videos/<%=video.id%>"></a><h3><%= video.title %></h3></a>
+      Views: <%= video.hits %>
+      <div style="text-align: right;">
+        <% if video.tags.length != 0 %>
+          Tags: 
+          <% video.tags.each do |tag| %>
+            <%= tag.name %>
+          <% end %>
+        <% else %>
+          Tags: 0
+        <% end %>
+      </div>
+      by <%= link_to video.user.username, '/users/' + video.user.id.to_s + '/profile' %>
+  </div>  
+</div>
   <% end %>
 <br>

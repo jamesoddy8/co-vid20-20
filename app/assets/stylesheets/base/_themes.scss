@@ -11,9 +11,9 @@ $themes: (
     base-2: scale-color($base-light, $lightness: -7),
     base-3: scale-color($base-light, $lightness: -11),
     contrast-0: $contrast-on-light,
-    contrast-1: rgba($contrast-on-light, 0.8),
-    contrast-2: rgba($contrast-on-light, 0.6),
-    contrast-3: rgba($contrast-on-light, 0.4),
+    contrast-1: rgba($contrast-on-light, 0.6),
+    contrast-2: rgba($contrast-on-light, 0.4),
+    contrast-3: rgba($contrast-on-light, 0.2),
     hyperlink: $hyperlink,
   ),
   dark: (

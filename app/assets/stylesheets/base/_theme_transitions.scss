@@ -11,7 +11,7 @@
   }
 }
 
-$color: h1, h2, p, a, b;
+$color: h1, h2, p, a, b, button;
 @include transition-group($color, color 1s ease);
 
 $background: container, header, form, input, button, div;

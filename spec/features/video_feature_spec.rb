@@ -6,8 +6,8 @@ RSpec.feature "video features", type: :feature do
   scenario "user can delete a video" do
     create_user_and_sign_up
     create_video
-    visit "/videos"
-    click_link "Destroy"
+    click_link "View your profile"
+    click_link "Delete this video"
     expect(page).to have_content "Video was successfully destroyed."
   end
 
@@ -23,7 +23,7 @@ RSpec.feature "video features", type: :feature do
   scenario "A user can edit their video" do
     create_user_and_sign_up
     create_video
-    visit "/videos"
+    click_link "View your profile"
     click_link "Edit"
     expect(page).to have_content "Editing Video"
   end
@@ -51,7 +51,7 @@ RSpec.feature "video features", type: :feature do
     fill_in 'comment_content', :with => 'great vid'
     click_button 'Create Comment'
     visit '/videos'
-    click_link 'Show'
+    page.first(".video-size-for-card a").click
     expect(page).to have_content 'great vid'
   end
 end

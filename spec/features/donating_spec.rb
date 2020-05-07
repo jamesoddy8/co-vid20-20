@@ -10,7 +10,7 @@ RSpec.describe "Donating to user", type: :feature do
         click_link "Sign Out"
         create_user_and_sign_up_2
         click_link "All videos"
-        click_link "Show"
+        page.first(".video-size-for-card a").click
         expect(page).to have_selector("input")
     end
 end

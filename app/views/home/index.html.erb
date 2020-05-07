@@ -1,27 +1,14 @@
-<h1>Covid 2020</h1>
+<div class="align-vertical">
 <% if current_user %>
 
-
-  <h3>Featured Videos</h3>
-
-  <h3>Most Watched this Week</h3>
-
-  <h3>Trending</h3>
-
-  <h3>Vidoes you may like</h3>
-
-  <h3>Most donated to</h3>
-
-  <h3>People who follow you</h3>
-  Amount of followers: <%= current_user.followers.count %>
+  <h3>You are following <%= current_user.following.count %> users</h3>
+  <h3>You have <%= current_user.followers.count %> followers</h3>
 
     <% current_user.followers.each do |follower|%>
-      <%= follower.email %>
+      <p><%= follower.email %></p>
     <% end%>
-  <h3>People you follow</h3>
-  Amount of people you follow: <%= current_user.following.count %>
     <% current_user.following.each do |follower|%>
-      <%= follower.email %>
+      <p><%= follower.email %></p>
     <% end%>
 
     <h3>Newest Uploads by people you follow</h3>
@@ -43,10 +30,5 @@
       </div>
       
     <% end%>
-
 <% end %>
-
-<h1>Heading 1</h1>
-<p>Commodo lacus nascetur sollicitudin magnis velit ridiculus sagittis, suspendisse posuere leo luctus penatibus iaculis ac, urna ante mollis natoque sodales sem. Dis nascetur porttitor aenean nullam nostra volutpat, massa ultrices tempus faucibus ipsum inceptos, ac porta et penatibus curabitur. Quis vel blandit dolor commodo luctus quisque vivamus elit litora sagittis pharetra ipsum egestas sodales ornare id, congue arcu tortor libero lacinia magnis ligula massa iaculis quam natoque nascetur orci malesuada.</p>
-<h2>Heading 2</h2>
-<p>Lacinia sollicitudin interdum at augue commodo fames tortor non, curabitur aliquet fermentum auctor ipsum iaculis erat ligula urna, dapibus lectus rutrum dictum facilisi diam maecenas. Ullamcorper nascetur natoque vitae enim purus ut augue nec odio, sodales curabitur conubia pretium donec vehicula maecenas litora eleifend, neque erat semper taciti aenean tempus arcu orci. Sem taciti consequat porttitor tempus commodo litora pulvinar, blandit cras aliquet interdum malesuada quis pretium rhoncus, montes curae neque morbi dictum at.</p>
+</div>
